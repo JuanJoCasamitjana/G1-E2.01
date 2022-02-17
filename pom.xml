@@ -18,8 +18,8 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	
-	<name>Hello-World</name>
-	<description>This is a Hello-World project for the students of Design &amp; Testing.</description>
+	<name>G1-E2.01</name>
+	<description>This is the evaluation project for the students of Design &amp; Testing.</description>
 
 	<groupId>Acme</groupId>	
 	<artifactId>Hello-World-22.0</artifactId>
