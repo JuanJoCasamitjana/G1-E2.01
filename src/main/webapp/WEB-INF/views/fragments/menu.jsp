@@ -23,6 +23,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-juacasben" action="https://www.reddit.com/r/badfoodporn/comments/g7y69z/made_my_wife_a_derpy_dragon_with_her_bday_waffles/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-serlopdia" action="http://www.netflix.com/es"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-andvarbay" action="https://www.youtube.com/watch?v=0iCtC-EOzEo"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
