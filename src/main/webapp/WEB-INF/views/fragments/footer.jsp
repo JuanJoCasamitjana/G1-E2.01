@@ -19,7 +19,8 @@
 <acme:footer-panel>
 	<acme:footer-subpanel code="master.footer.title.about">
 		<acme:footer-option icon="fa fa-building" code="master.footer.label.company" action="/master/company"/>
-		<acme:footer-option icon="fa fa-file" code="master.footer.label.license" action="/master/license"/>		
+		<acme:footer-option icon="fa fa-file" code="master.footer.label.license" action="/master/license"/>
+		<acme:footer-option icon="fa fa-database" code="master.footer.label.database" action="https://github.com/JuanJoCasamitjana/G1-E2.01"/>		
 	</acme:footer-subpanel>
 
 	<acme:footer-subpanel code="master.footer.title.social">
