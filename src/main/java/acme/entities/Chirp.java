@@ -1,14 +1,16 @@
 package acme.entities;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
@@ -27,20 +29,18 @@ public class Chirp extends AbstractEntity{
 	// Attributes -------------------------------------------------------------
 
 	@NotNull
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
-	protected LocalDate creationMoment;
+	@Past
+	@Temporal(value = TemporalType.TIMESTAMP)
+	protected Date creationMoment;
 	
-	@NotNull
 	@NotBlank
 	@Length(max = 100)
 	protected String title;
 	
-	@NotNull
 	@NotBlank
 	@Length(max = 100) 
 	protected String author;
 	
-	@NotNull
 	@NotBlank
 	@Length(max = 255) 
 	protected String body;
