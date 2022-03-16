@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class PatronDashboard extends Dashboard implements Serializable {
+public class PatronDashboard implements Serializable {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -16,7 +16,11 @@ public class PatronDashboard extends Dashboard implements Serializable {
 
 	// Attributes -------------------------------------------------------------
 
-	// The atributes are defined in Dashboard.
+	Integer						totalNumberPatronagesOfStatus;
+	Double						averageBudgetPatronagesOfStatusByCurrency;
+	Double						deviationBudgetPatronagesOfStatusByCurrency;
+	Double						minimumBudgetPatronagesOfStatusByCurrency;
+	Double						maximumBudgetPatronagesOfStatusByCurrency;
 
 	// Derived attributes -----------------------------------------------------
 
