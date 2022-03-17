@@ -1,7 +1,7 @@
 package acme.entities;
 
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -33,7 +33,7 @@ public class PatronageReport extends AbstractEntity {
 	@Past
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected LocalDate creationDate;
+	protected Date creationDate;
 	
 	@NotBlank
 	@Length(max = 255)

@@ -1,7 +1,6 @@
 package acme.entities;
 
-import java.time.LocalDate;
-import java.time.Period;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -53,26 +52,20 @@ public class Patronage extends AbstractEntity {
 	@Past
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected LocalDate creationDate;
+	protected Date creationDate;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected LocalDate startDate;
+	protected Date startDate;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected LocalDate finishDate;
+	protected Date finishDate;
 	
 	@URL
 	protected String moreInfo;
 	
 	//Derived attributes
-	
-	@NotNull
-	protected Period period() {
-					
-		return Period.between(this.finishDate, this.startDate);
-	}
 	
 	//Relationships
 	
