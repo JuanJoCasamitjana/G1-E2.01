@@ -20,6 +20,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Announcement extends AbstractEntity {
+	protected static final long	serialVersionUID	= 1L;
 	@NotNull
 	@Past
 	@Temporal(value = TemporalType.TIMESTAMP)
