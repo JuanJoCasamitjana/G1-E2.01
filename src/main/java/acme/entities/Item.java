@@ -52,7 +52,7 @@ public class Item  extends AbstractEntity {
 	protected Money retailPrice;
 	
 	@URL
-	protected String moreInfo;
+	protected String optionalLink;
 	
 	// Derived attributes -----------------------------------------------------
 	
