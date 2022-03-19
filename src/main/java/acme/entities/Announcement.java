@@ -23,7 +23,6 @@ public class Announcement extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;
 	
-	
 	@NotNull
 	@Past
 	@Temporal(value = TemporalType.TIMESTAMP)
@@ -36,8 +35,9 @@ public class Announcement extends AbstractEntity {
 	@NotBlank
 	@Length(max=255)
 	protected String body;
-	@NotNull
+	
 	protected Boolean critical;
+	
 	@URL
-	protected String moreInfo;
+	protected String optionalLink;
 }
