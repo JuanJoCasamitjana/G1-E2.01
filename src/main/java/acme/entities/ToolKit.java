@@ -1,16 +1,12 @@
 package acme.entities;
 
-import javax.persistence.CascadeType;
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.annotations.Check;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
@@ -48,16 +44,4 @@ public class ToolKit extends AbstractEntity{
 	
 	@URL
 	protected String optionalLink;
-	
-	@NotNull
-	@Check(constraints = "tool.type = 'TOOL'")
-	@JoinColumn
-	@OneToOne(cascade=CascadeType.ALL)
-	protected Item tool;
-	
-	@NotNull
-	@Check(constraints = "component.type = 'COMPONENT'")
-	@JoinColumn
-	@ManyToOne(cascade=CascadeType.ALL)
-	protected Item component;
 }
