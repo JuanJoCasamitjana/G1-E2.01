@@ -22,11 +22,8 @@ public class Quantity extends AbstractEntity {
 	
 	// Attributes -------------------------------------------------------------
 	
-	@Min(0)
-	protected int componentQuantity;
-	
-	@Min(0)
-	protected int toolQuantity;
+	@Min(1)
+	protected int quantity;
 	
 	// Derived attributes -----------------------------------------------------
 
