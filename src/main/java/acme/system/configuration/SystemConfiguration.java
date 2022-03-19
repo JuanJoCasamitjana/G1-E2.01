@@ -17,10 +17,10 @@ public class SystemConfiguration extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 	
 	@NotBlank
-	private String defaultSystemCurrency;
+	private String acceptedCurrencies;
 	
 	@NotBlank
-	private String acceptedCurrencies;
+	private String defaultSystemCurrency;
 	
 	@NotBlank
 	private String strongSpamTerms;
