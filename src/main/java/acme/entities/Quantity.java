@@ -23,7 +23,7 @@ public class Quantity extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 	
 	@Min(1)
-	protected int quantity;
+	protected int amount;
 	
 	// Derived attributes -----------------------------------------------------
 
@@ -37,6 +37,6 @@ public class Quantity extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected ToolKit toolkit;
+	protected ToolKit toolKit;
 	
 }
