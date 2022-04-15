@@ -1,7 +1,7 @@
 key,enabled,identity,password,username
 user-account-anonymous-01,false,"UserIdentity{name: 'John', surname: 'Doe', email: 'john.doe@acme.com'}",HIDDEN-PASSWORD,anonymous
 user-account-administrator-01,true,"UserIdentity{name: 'Administrator', surname: 'Acme', email: 'administrator@acme.com'}",administrator,administrator
-user-account-inventor-01,false,"UserIdentity{name: 'Pedro', surname: 'Seda', email: 'inventor1@gmail.com'}",inventor1,inventor1
+user-account-inventor-01,true,"UserIdentity{name: 'Pedro', surname: 'Seda', email: 'inventor1@gmail.com'}",inventor1,inventor1
 user-account-inventor-02,false,"UserIdentity{name: 'Alberto', surname: 'Hernandez', email: 'inventor1@gmail.com'}",inventor2,inventor2
 user-account-inventor-03,false,"UserIdentity{name: 'Manuel', surname: 'Bond', email: 'inventor1@gmail.com'}",inventor3,inventor3
 user-account-inventor-04,false,"UserIdentity{name: 'Rodolfo', surname: 'Garcia', email: 'inventor1@gmail.com'}",inventor4,inventor4
