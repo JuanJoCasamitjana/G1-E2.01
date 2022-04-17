@@ -1,6 +1,5 @@
-package acme.features.inventor.patronage;
+package acme.features.patron.patronage;
 
-import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,18 +7,18 @@ import org.springframework.stereotype.Service;
 import acme.entities.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.services.AbstractListService;
-import acme.roles.Inventor;
+import acme.framework.services.AbstractShowService;
+import acme.roles.Patron;
 
 @Service
-public class InventorPatronageListService implements AbstractListService<Inventor, Patronage> {
+public class PatronPatronageShowService implements AbstractShowService<Patron, Patronage> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected InventorPatronageRepository repository;
+	protected PatronPatronageRepository repository;
 
-	// AbstractListService<Inventor, Patronage> interface --------------
+	// AbstractShowService<Patron, Patronage> interface --------------
 
 
 	@Override
@@ -30,23 +29,27 @@ public class InventorPatronageListService implements AbstractListService<Invento
 	}
 
 	@Override
-	public Collection<Patronage> findMany(final Request<Patronage> request) {
+	public Patronage findOne(final Request<Patronage> request) {
 		assert request != null;
 
-		Collection<Patronage> result;
+		Patronage result;
+		int id;
 
-		result = this.repository.findAllPatronages();
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOnePatronageById(id);
 
 		return result;
 	}
-	
+
 	@Override
 	public void unbind(final Request<Patronage> request, final Patronage entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
+		model.setAttribute("inventorId", entity.getInventor().getUserAccount().getId());
+
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget", "creationDate", "startDate", "finishDate", "info");
 	}
-
+	
 }

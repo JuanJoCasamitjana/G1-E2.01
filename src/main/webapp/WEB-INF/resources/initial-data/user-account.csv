@@ -5,7 +5,7 @@ user-account-inventor-01,true,"UserIdentity{name: 'Pedro', surname: 'Seda', emai
 user-account-inventor-02,false,"UserIdentity{name: 'Alberto', surname: 'Hernandez', email: 'inventor1@gmail.com'}",inventor2,inventor2
 user-account-inventor-03,false,"UserIdentity{name: 'Manuel', surname: 'Bond', email: 'inventor1@gmail.com'}",inventor3,inventor3
 user-account-inventor-04,false,"UserIdentity{name: 'Rodolfo', surname: 'Garcia', email: 'inventor1@gmail.com'}",inventor4,inventor4
-user-account-patron-01,false,"UserIdentity{name: 'Roberto', surname: 'Bru', email: 'patron1@gmail.com'}",patron1,patron1
+user-account-patron-01,true,"UserIdentity{name: 'Roberto', surname: 'Bru', email: 'patron1@gmail.com'}",patron1,patron1
 user-account-patron-02,false,"UserIdentity{name: 'Javier', surname: 'Guerra', email: 'patron2@gmail.com'}",patron2,patron2
 user-account-patron-03,false,"UserIdentity{name: 'Yoel', surname: 'Ortiz', email: 'patron3@gmail.com'}",patron3,patron3
 user-account-patron-04,false,"UserIdentity{name: 'Daniel', surname: 'Gallardo', email: 'patron4@gmail.com'}",patron4,patron4
