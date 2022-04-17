@@ -12,7 +12,7 @@ import acme.framework.services.AbstractListService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorPatronageListAllService implements AbstractListService<Inventor, Patronage> {
+public class InventorPatronageListService implements AbstractListService<Inventor, Patronage> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -46,7 +46,7 @@ public class InventorPatronageListAllService implements AbstractListService<Inve
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "status", "code", "legalStuff", "info");
+		request.unbind(entity, model, "status", "code", "legalStuff", "budget", "creationDate", "startDate", "finishDate", "info");
 	}
 
 }

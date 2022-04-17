@@ -15,13 +15,10 @@ public class InventorPatronageController extends AbstractController<Inventor, Pa
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected InventorPatronageListAllService	listAllService;
+	protected InventorPatronageListService	listService;
 
 	@Autowired
-	protected InventorPatronageListRecentService	listRecentService;
-
-	@Autowired
-	protected InventorPatronageShowService			showService;
+	protected InventorPatronageShowService	showService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -30,8 +27,7 @@ public class InventorPatronageController extends AbstractController<Inventor, Pa
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("show", this.showService);
-		super.addCommand("list-all", "list", this.listAllService);
-		super.addCommand("list-recent", "list", this.listRecentService);
+		super.addCommand("list", this.listService);
 	}
 
 }
