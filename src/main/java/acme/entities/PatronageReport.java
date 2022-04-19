@@ -3,6 +3,7 @@ package acme.entities;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -11,6 +12,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -39,22 +41,15 @@ public class PatronageReport extends AbstractEntity {
 	@Length(max = 255)
 	protected String memorandum;
 	
+	@NotBlank
+	@Column(unique=true)
+	@Pattern(regexp="^[A-Z]{3}-[0-9]{3}(-[A-Z])?:[0-9][0-9][0-9][0-9]$", message="wrong pattern, example -> ABZ-019-A:0001")
+	protected String serialCode;
+	
 	@URL
 	protected String optionalLink;
 		
 	//Derived attributes
-	
-	@NotBlank
-	protected String serialCode() {
-			
-		String serialNumber = Integer.toString(this.id);
-		
-		while (serialNumber.length() < 4) {
-			serialNumber = "0" + serialNumber;
-		}
-		
-		return this.patronage.getCode() + ":" + serialNumber;
-	}
 	
 	//Relationships
 	
