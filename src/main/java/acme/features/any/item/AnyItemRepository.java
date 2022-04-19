@@ -16,5 +16,5 @@ public interface AnyItemRepository extends AbstractRepository{
 	Item findOneItemByIde(int id);
 	
 	@Query("select i from Item i where i.type = :type")
-	Collection<Item> findAllComponents(ItemType type);
+	Collection<Item> findAllByType(ItemType type);
 }

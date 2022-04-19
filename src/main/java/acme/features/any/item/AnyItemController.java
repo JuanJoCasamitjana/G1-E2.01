@@ -17,6 +17,9 @@ public class AnyItemController extends AbstractController<Any, Item>{
 	protected AnyItemListComponentService listComponentService;
 	
 	@Autowired
+	protected AnyItemListToolService listToolService;
+	
+	@Autowired
 	protected AnyItemShowService showService;
 	
 	// Constructors -----------------------------------------------------------
@@ -24,6 +27,7 @@ public class AnyItemController extends AbstractController<Any, Item>{
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list-component", "list", this.listComponentService);
+		super.addCommand("list-tool", "list", this.listToolService);
 		super.addCommand("show", this.showService);
 	}
 		
