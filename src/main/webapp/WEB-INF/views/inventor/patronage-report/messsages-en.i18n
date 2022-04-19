@@ -1,0 +1,9 @@
+inventor.patronageReport.list.label.creationDate = Creation Date
+inventor.patronageReport.list.label.memorandum = Memorandum
+inventor.patronageReport.list.label.optionalLink = Optional Link
+inventor.patronageReport.list.label.serialCode = Serial Code
+
+inventor.patronageReport.form.label.creationDate = Creation Date
+inventor.patronageReport.form.label.memorandum = Memorandum
+inventor.patronageReport.form.label.optionalLink = Optional Link
+inventor.patronageReport.form.label.serialCode = Serial Code
