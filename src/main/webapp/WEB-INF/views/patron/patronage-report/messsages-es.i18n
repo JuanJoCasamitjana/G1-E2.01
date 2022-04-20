@@ -1,0 +1,9 @@
+patron.patronageReport.list.label.creationDate = Fecha de Creación
+patron.patronageReport.list.label.memorandum = Memorandum
+patron.patronageReport.list.label.optionalLink = Link Opcional
+patron.patronageReport.list.label.serialCode = Código de Serie
+
+patron.patronageReport.form.label.creationDate = Fecha de Creación
+patron.patronageReport.form.label.memorandum = Memorandum
+patron.patronageReport.form.label.optionalLink = Link Opcional
+patron.patronageReport.form.label.serialCode = Código de Serie
