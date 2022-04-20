@@ -1,0 +1,25 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+anonymous.tool-kit.form.label.code = Code:
+anonymous.tool-kit.form.label.title = Title:
+anonymous.tool-kit.form.label.description = Description:
+anonymous.tool-kit.form.label.assembly-notes = Assembly Notes:
+anonymous.tool-kit.form.label.optional-link = Optional Link:
+
+anonymous.tool-kit.form.button.update = Update
+
+anonymous.tool-kit.list.title = Listing of tool kits
+
+anonymous.tool-kit.list.label.code = Code
+anonymous.tool-kit.list.label.title = Title
+anonymous.tool-kit.list.label.description = Description
+anonymous.tool-kit.list.label.assembly-notes = Assembly Notes
+anonymous.tool-kit.list.label.optional-link = Optional Link
