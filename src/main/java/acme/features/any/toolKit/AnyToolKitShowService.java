@@ -58,8 +58,7 @@ public class AnyToolKitShowService implements AbstractShowService<Any, ToolKit> 
 		assert entity != null;
 		assert model != null;
 
-		
-		model.setAttribute("canUpdate", request.getPrincipal().getAuthorities().stream().anyMatch(x->x.getAuthority().contains("admin")));
+		model.setAttribute("canUpdate", true);
 		
 		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "optionalLink");
 	}

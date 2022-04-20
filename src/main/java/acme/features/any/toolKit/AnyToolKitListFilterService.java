@@ -1,5 +1,5 @@
 /*
- * AdministratorUserAccountShowService.java
+ * AdministratorUserAccountListService.java
  *
  * Copyright (C) 2012-2022 Rafael Corchuelo.
  *
@@ -10,7 +10,9 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.anonymous.toolKit;
+package acme.features.any.toolKit;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,18 +20,18 @@ import org.springframework.stereotype.Service;
 import acme.entities.ToolKit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.roles.Anonymous;
-import acme.framework.services.AbstractShowService;
+import acme.framework.roles.Any;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousToolKitShowService implements AbstractShowService<Anonymous, ToolKit> {
+public class AnyToolKitListFilterService implements AbstractListService<Any, ToolKit> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnonymousToolKitRepository repository;
+	protected AnyToolKitRepository repository;
 
-	// AbstractShowService<Administrator, UserAccount> interface --------------
+	// AbstractListService<Administrator, UserAccount> interface --------------
 
 
 	@Override
@@ -38,30 +40,35 @@ public class AnonymousToolKitShowService implements AbstractShowService<Anonymou
 
 		return true;
 	}
-
+	
 	@Override
-	public ToolKit findOne(final Request<ToolKit> request) {
+	public Collection<ToolKit> findMany(final Request<ToolKit> request) {
 		assert request != null;
-
-		ToolKit result;
-		int id;
-
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneToolKitById(id);
-
+		
+		final Model model = request.getModel();
+		
+		final Collection<String> attrs = model.getAttributes();
+		
+		for(final String attr : attrs) {
+			System.out.println(attr + ": " + model.getAttribute(attr));
+		}
+		
+		Collection<ToolKit> result;
+		
+		result = this.repository.findAllToolKits();
+		
+		
 		return result;
 	}
-
+	
 	@Override
 	public void unbind(final Request<ToolKit> request, final ToolKit entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
 		
-		model.setAttribute("canUpdate", false);
 		
 		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "optionalLink");
 	}
-	
+
 }

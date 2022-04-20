@@ -17,6 +17,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Item;
 import acme.entities.ToolKit;
 import acme.framework.repositories.AbstractRepository;
 
@@ -28,5 +29,8 @@ public interface AnyToolKitRepository extends AbstractRepository {
 
 	@Query("select tk from ToolKit tk")
 	Collection<ToolKit> findAllToolKits();
+	
+	@Query("select it from Item it")
+	Collection<Item> findAllItems();
 
 }

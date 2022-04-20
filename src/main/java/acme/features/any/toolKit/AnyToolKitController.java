@@ -30,12 +30,12 @@ public class AnyToolKitController extends AbstractController<Any, ToolKit> {
 
 	@Autowired
 	protected AnyToolKitListService	listService;
+	
+	@Autowired
+	protected AnyToolKitListFilterService	listFilterService;
 
 	@Autowired
 	protected AnyToolKitShowService	showService;
-
-	@Autowired
-	protected AnyToolKitUpdateService	updateService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -43,8 +43,8 @@ public class AnyToolKitController extends AbstractController<Any, ToolKit> {
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.listService);
+		super.addCommand("list-filter", this.listFilterService);
 		super.addCommand("show", this.showService);
-		super.addCommand("update", this.updateService);
 	}
 
 }

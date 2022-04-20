@@ -17,6 +17,8 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Item;
+import acme.entities.ItemType;
 import acme.entities.ToolKit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -43,6 +45,8 @@ public class AnyToolKitListService implements AbstractListService<Any, ToolKit> 
 	
 	@Override
 	public Collection<ToolKit> findMany(final Request<ToolKit> request) {
+		
+		System.out.println("llega hasta aqui");
 		assert request != null;
 
 		Collection<ToolKit> result;
@@ -58,8 +62,20 @@ public class AnyToolKitListService implements AbstractListService<Any, ToolKit> 
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-				
-		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "optionalLink");
+		
+		Collection<Item> components;
+		Collection<Item> tools;
+		
+		tools = this.repository.findAllItems();
+		components = this.repository.findAllItems();
+		
+		tools.removeIf(x->x.getType()!=ItemType.TOOL);
+		components.removeIf(x->x.getType()!=ItemType.COMPONENT);
+		
+		
+		
+		
+		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "optionalLink", "components", "tools");
 	}
 
 }

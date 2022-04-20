@@ -14,8 +14,6 @@ any.tool-kit.form.label.description = Descripcion:
 any.tool-kit.form.label.assembly-notes = Notas de Montaje:
 any.tool-kit.form.label.optional-link = Enlace Opcional:
 
-any.tool-kit.form.button.update = Actualizar
-
 any.tool-kit.list.title = Listado de tool kits
 
 any.tool-kit.list.label.code = Codigo
