@@ -50,6 +50,7 @@ master.menu.anonymous.favourite-link-danenrdia = 17480901G: Enríquez Díaz, Dan
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
+master.menu.user-account.authenticated.announcement.list = Lista de anuncios
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
