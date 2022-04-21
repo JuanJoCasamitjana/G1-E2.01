@@ -25,6 +25,36 @@ master.menu.anonymous.favourite-link-andvarbay = 07269180F: Vargas Bayon, Andres
 master.menu.anonymous.favourite-link-danenrdia = 17480901G: Enríquez Díaz, Daniel
 master.menu.anonymous.favourite-link.victor = 32081538B: Gravan, Victor
 
+# master.menu.any #######################################################
+
+master.menu.any = Todos 
+master.menu.any.toolkits = Toolkits publicadas 
+master.menu.any.components = Componentes publicados 
+master.menu.any.tools = Herramientas publicadas 
+master.menu.any.chirps = Mensajes recientes 
+master.menu.any.user-accounts = Usuarios
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Autenticados 
+master.menu.authenticated.announcements = Anuncios rencientes
+master.menu.authenticated.system-configuration = Configuracion
+
+# master.menu.inventor #######################################################
+
+master.menu.inventor = Inventores 
+master.menu.inventor.toolkits = Mis caja de herramientas 
+master.menu.inventor.components = Mis componentes
+master.menu.inventor.tools = Mis herramientas
+master.menu.inventor.patronage-reports = Mis reportes de patrocinios
+master.menu.inventor.patronage = Mis patrocinios
+
+# master.menu.patron #######################################################
+
+master.menu.patron = Patrocinadores 
+master.menu.patron.patronage = Mis patrocinios
+master.menu.patron.patronage-report = Mis reportes de patrocinios
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -33,6 +63,7 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.system-configuration = Configuracion
 
 # master.menu.provider ########################################################
 
