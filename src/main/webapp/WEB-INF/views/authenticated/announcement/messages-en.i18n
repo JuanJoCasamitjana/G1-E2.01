@@ -1,8 +1,8 @@
-authenticated.announcement.form.label.title = "Title"
-authenticated.announcement.form.label.critical = "Criticality"
-authenticated.announcement.form.label.body = "Body"
-authenticated.announcement.form.label.url = "URL"
+authenticated.announcement.form.label.title = Title
+authenticated.announcement.form.label.critical = Criticality
+authenticated.announcement.form.label.body = Body
+authenticated.announcement.form.label.url = URL
 
-authenticated.announcement.list.label.moment = "Creation moment"
-authenticated.announcement.list.label.critical = "Criticality"
-authenticated.announcement.list.label.title = "Title"
+authenticated.announcement.list.label.moment = Creation moment
+authenticated.announcement.list.label.critical = Criticality
+authenticated.announcement.list.label.title = Title

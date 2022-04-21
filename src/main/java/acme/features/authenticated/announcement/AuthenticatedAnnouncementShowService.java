@@ -29,7 +29,7 @@ public class AuthenticatedAnnouncementShowService implements AbstractShowService
 		int id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneAnnouncementById(id);
-		return null;
+		return result;
 	}
 
 	@Override
