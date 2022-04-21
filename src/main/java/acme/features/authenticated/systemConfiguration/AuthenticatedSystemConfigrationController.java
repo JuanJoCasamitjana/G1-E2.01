@@ -17,6 +17,6 @@ public class AuthenticatedSystemConfigrationController extends AbstractControlle
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("acceptedCurrencies", this.currenciesService);
+		super.addCommand("show", this.currenciesService);
 	}
 }

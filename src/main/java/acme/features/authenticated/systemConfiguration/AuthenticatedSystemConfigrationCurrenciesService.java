@@ -40,12 +40,9 @@ public class AuthenticatedSystemConfigrationCurrenciesService implements Abstrac
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "acceptedCurrencies");
+		request.unbind(entity, model, "acceptedCurrencies","defaultSystemCurrency");
 		
-		String[] currencies;
-		currencies = entity.getAcceptedCurrencies().split(",");
 		
-		model.setAttribute("acceptedCurrenciesArray", currencies);
 		
 	}
 }
