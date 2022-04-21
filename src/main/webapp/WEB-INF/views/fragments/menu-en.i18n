@@ -26,6 +26,35 @@ master.menu.anonymous.favourite-link-andvarbay = 07269180F: Vargas Bayon, Andres
 master.menu.anonymous.favourite-link-danenrdia = 17480901G: Enríquez Díaz, Daniel
 master.menu.anonymous.favourite-link.victor = 32081538B: Gravan, Victor
 
+# master.menu.any #######################################################
+
+master.menu.any = All 
+master.menu.any.toolkits = Published toolkits 
+master.menu.any.components = Published components 
+master.menu.any.tools = Published tools 
+master.menu.any.chirps = Recent chirps 
+master.menu.any.user-accounts = Users
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated 
+master.menu.authenticated.announcements = Recent announcements
+master.menu.authenticated.system-configuration = Configuration
+
+# master.menu.inventor #######################################################
+
+master.menu.inventor = Inventors 
+master.menu.inventor.toolkits = My toolkits
+master.menu.inventor.components = My components
+master.menu.inventor.tools = My tools
+master.menu.inventor.patronage-reports = My patronage reports
+master.menu.inventor.patronage = My patronages
+
+# master.menu.patron #######################################################
+
+master.menu.patron = Patrons 
+master.menu.patron.patronage = My patronages
+master.menu.patron.patronage-report = My patronage reports
 
 # master.menu.administrator ###################################################
 
@@ -35,6 +64,7 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
+master.menu.administrator.system-configuration = Configuration
 
 # master.menu.provider ########################################################
 
