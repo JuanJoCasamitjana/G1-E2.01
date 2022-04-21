@@ -20,8 +20,8 @@ public class InventorItemController extends AbstractController<Inventor,Item> {
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list-component", this.componentListService);
-		super.addCommand("list-tool", this.tooltListService);
+		super.addCommand("list-component", "list",  this.componentListService);
+		super.addCommand("list-tool", "list",  this.tooltListService);
 		super.addCommand("show", this.showService);
 	}
 	
