@@ -35,7 +35,7 @@ public class AdminDashboard implements Serializable {
 	Map<String, Money>					minimumRetailPriceToolsByCurrency;
 	Map<String, Money>					maximumRetailPriceToolsByCurrency;
 
-	Map<String, Integer>				totalNumberPatronagesOfStatus;
+	Map<Status, Integer>				totalNumberPatronagesOfStatus;
 
 	Map<Status, Money>					averageBudgetPatronagesOfStatus;
 	Map<Status, Money>					deviationBudgetPatronagesOfStatus;

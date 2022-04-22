@@ -1,0 +1,20 @@
+administrator.admin-dashboard.form.components = Component Metrics
+administrator.admin-dashboard.form.tools = Tools Metrics
+administrator.admin-dashboard.form.patronages = Patronages Metrics
+
+administrator.admin-dashboard.form.title = Administrator Metrics
+administrator.admin-dashboard.form.count-components = Total Number of Components
+administrator.admin-dashboard.form.average-components = Average retail price of components by technology and currency
+administrator.admin-dashboard.form.deviation-components = Deviation retail price of components by technology and currency
+administrator.admin-dashboard.form.minimum-components = Minimum retail price of components by technology and currency
+administrator.admin-dashboard.form.maximum-components = Maximum retail price of components by technology and currency
+administrator.admin-dashboard.form.count-tools = Total Number of Tools
+administrator.admin-dashboard.form.average-tools = Average retail price of tools by currency
+administrator.admin-dashboard.form.deviation-tools = Deviation retail price of tools by currency
+administrator.admin-dashboard.form.minimum-tools = Minimum retail price of tools by currency
+administrator.admin-dashboard.form.maximum-tools = Maximum retail price of tools by currency
+administrator.admin-dashboard.form.count-patronages = Total number of patronages of status
+administrator.admin-dashboard.form.average-patronages = Average budget of patronages of status
+administrator.admin-dashboard.form.deviation-patronages = Deviation budget of patronages of status
+administrator.admin-dashboard.form.minimum-patronages = Minimum budget of patronages of status
+administrator.admin-dashboard.form.maximum-patronages = Maximum budget of patronages of status
