@@ -11,6 +11,7 @@
 any.user-account.form.label.username = Nombre de usuario:
 any.user-account.form.label.name = Nombre:
 any.user-account.form.label.surname = Apellidos:
+any.user-account.form.label.rol = Rol:
 
 any.user-account.form.button.update = Actualizar
 
