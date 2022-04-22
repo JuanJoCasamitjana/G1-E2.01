@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.data.util.Pair;
 
 import acme.entities.Status;
+import acme.framework.datatypes.Money;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,24 +23,24 @@ public class AdminDashboard implements Serializable {
 
 	int									totalNumberComponents;
 
-	Map<Pair<String, String>, Double>	averageRetailPriceComponentsByTechnologyAndCurrency;
-	Map<Pair<String, String>, Double>	deviationRetailPriceComponentsByTechnologyAndCurrency;
-	Map<Pair<String, String>, Double>	minimumRetailPriceComponentsByTechnologyAndCurrency;
-	Map<Pair<String, String>, Double>	maximumRetailPriceComponentsByTechnologyAndCurrency;
+	Map<Pair<String, String>, Money>	averageRetailPriceComponentsByTechnologyAndCurrency;
+	Map<Pair<String, String>, Money>	deviationRetailPriceComponentsByTechnologyAndCurrency;
+	Map<Pair<String, String>, Money>	minimumRetailPriceComponentsByTechnologyAndCurrency;
+	Map<Pair<String, String>, Money>	maximumRetailPriceComponentsByTechnologyAndCurrency;
 
 	int									totalNumberTools;
 
-	Map<String, Double>					averageRetailPriceToolsByCurrency;
-	Map<String, Double>					deviationRetailPriceToolsByCurrency;
-	Map<String, Double>					minimumRetailPriceToolsByCurrency;
-	Map<String, Double>					maximumRetailPriceToolsByCurrency;
+	Map<String, Money>					averageRetailPriceToolsByCurrency;
+	Map<String, Money>					deviationRetailPriceToolsByCurrency;
+	Map<String, Money>					minimumRetailPriceToolsByCurrency;
+	Map<String, Money>					maximumRetailPriceToolsByCurrency;
 
 	Map<String, Integer>				totalNumberPatronagesOfStatus;
 
-	Map<Status, Double>					averageBudgetPatronagesOfStatus;
-	Map<Status, Double>					deviationBudgetPatronagesOfStatus;
-	Map<Status, Double>					minimumBudgetPatronagesOfStatus;
-	Map<Status, Double>					maximumBudgetPatronagesOfStatus;
+	Map<Status, Money>					averageBudgetPatronagesOfStatus;
+	Map<Status, Money>					deviationBudgetPatronagesOfStatus;
+	Map<Status, Money>					minimumBudgetPatronagesOfStatus;
+	Map<Status, Money>					maximumBudgetPatronagesOfStatus;
 
 	// Derived attributes -----------------------------------------------------
 
