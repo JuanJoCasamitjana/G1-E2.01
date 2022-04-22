@@ -22,7 +22,7 @@
 	<description>This is the evaluation project for the students of Design &amp; Testing.</description>
 
 	<groupId>Acme</groupId>	
-	<artifactId>Hello-World-22.0</artifactId>
+	<artifactId>Acme-ToolKit-22.3</artifactId>
 	<version>22.0</version>
 	<packaging>war</packaging>
 
