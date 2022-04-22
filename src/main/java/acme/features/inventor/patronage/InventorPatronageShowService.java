@@ -1,6 +1,5 @@
-package acme.features.patron.patronage;
+package acme.features.inventor.patronage;
 
-import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,18 +7,18 @@ import org.springframework.stereotype.Service;
 import acme.entities.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.services.AbstractListService;
-import acme.roles.Patron;
+import acme.framework.services.AbstractShowService;
+import acme.roles.Inventor;
 
 @Service
-public class PatronPatronageListService implements AbstractListService<Patron, Patronage> {
+public class InventorPatronageShowService implements AbstractShowService<Inventor, Patronage> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected PatronPatronageRepository repository;
+	protected InventorPatronageRepository repository;
 
-	// AbstractListService<Patron, Patronage> interface --------------
+	// AbstractShowService<Inventor, Patronage> interface --------------
 
 
 	@Override
@@ -30,24 +29,27 @@ public class PatronPatronageListService implements AbstractListService<Patron, P
 	}
 
 	@Override
-	public Collection<Patronage> findMany(final Request<Patronage> request) {
+	public Patronage findOne(final Request<Patronage> request) {
 		assert request != null;
 
-		Collection<Patronage> result;
-		final int patronId = request.getPrincipal().getActiveRoleId();
+		Patronage result;
+		int id;
 
-		result = this.repository.findPatronagesByPatronId(patronId);
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOnePatronageById(id);
 
 		return result;
 	}
-	
+
 	@Override
 	public void unbind(final Request<Patronage> request, final Patronage entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
+		model.setAttribute("patronId", entity.getPatron().getUserAccount().getId());
+
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget", "creationDate", "startDate", "finishDate", "info");
 	}
-
+	
 }
