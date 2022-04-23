@@ -11,8 +11,14 @@ public class InventorToolKitListShowTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/tool-kit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String name, 
-		final String surname, final String username, final String roles) {
-		
+	public void positiveTest(final int recordIndex,final String code, final String name, 
+		final String title, final String description, final String assemblyNotes, 
+		final String optionalLink) {
+		super.signIn("inventor1", "inventor1");
+		super.clickOnMenu("Inventor", "");
+		super.checkListingExists();
+		super.sortListing(1, "asc");
+
+		super.signOut();
 	}
 }
