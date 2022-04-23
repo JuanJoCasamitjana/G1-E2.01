@@ -34,8 +34,9 @@ public class PatronPatronageListService implements AbstractListService<Patron, P
 		assert request != null;
 
 		Collection<Patronage> result;
+		final int patronId = request.getPrincipal().getActiveRoleId();
 
-		result = this.repository.findAllPatronages();
+		result = this.repository.findPatronagesByPatronId(patronId);
 
 		return result;
 	}

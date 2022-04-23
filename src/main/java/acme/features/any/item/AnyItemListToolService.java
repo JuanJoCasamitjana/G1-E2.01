@@ -33,7 +33,7 @@ public class AnyItemListToolService implements AbstractListService<Any, Item> {
 			
 			Collection<Item> result;
 			
-			result = this.repository.findAllByType(ItemType.TOOL);
+			result = this.repository.findAllByTypeIfPublished(ItemType.TOOL);
 			
 			return result;
 		}
@@ -44,7 +44,7 @@ public class AnyItemListToolService implements AbstractListService<Any, Item> {
 			assert entity != null;
 			assert model != null;
 
-			request.unbind(entity, model, "type", "name", "code", "technology", "description", "retailPrice", "optionalLink");
+			request.unbind(entity, model, "type", "name", "code", "technology", "description", "retailPrice", "optionalLink", "published");
 			
 		}
 	

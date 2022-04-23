@@ -5,6 +5,7 @@ any.item.list.label.technology = Tecnología
 any.item.list.label.description = Descripción
 any.item.list.label.retailPrice = Precio Minorista
 any.item.list.label.optionalLink = Enlace Opcional
+any.item.list.label.published = Publicado
 
 any.item.form.label.type = Tipo
 any.item.form.label.name = Nombre
@@ -13,3 +14,4 @@ any.item.form.label.technology = Presupuesto
 any.item.form.label.description = Descripción
 any.item.form.label.retailPrice = Precio Minorista
 any.item.form.label.optionalLink = Enlace Opcional
+any.item.form.label.published = Publicado

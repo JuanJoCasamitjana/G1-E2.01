@@ -13,8 +13,11 @@ import acme.framework.repositories.AbstractRepository;
 public interface AnyItemRepository extends AbstractRepository{
 
 	@Query("select i from Item i where i.id = :id")
-	Item findOneItemByIde(int id);
+	Item findOneItemById(int id);
 	
-	@Query("select i from Item i where i.type = :type")
-	Collection<Item> findAllByType(ItemType type);
+	@Query("select i from Item i where i.type = :type and i.published = true")
+	Collection<Item> findAllByTypeIfPublished(ItemType type);
+	
+	@Query("select i from Item i where i.published = true")
+	Collection<Item> findAllIfPublished();
 }

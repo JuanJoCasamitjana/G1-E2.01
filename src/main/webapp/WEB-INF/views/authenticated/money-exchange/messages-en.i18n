@@ -8,16 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.user-account.form.label.username = Username:
-any.user-account.form.label.name = Name:
-any.user-account.form.label.surname = Surname:
-any.user-account.form.label.rol = Role:
+authenticated.money-exchange.form.label.source = Source money:
+authenticated.money-exchange.form.label.target-currency = Target currency:
+authenticated.money-exchange.form.label.date = Exchange date:
+authenticated.money-exchange.form.label.target = Target money:
+	
+authenticated.money-exchange.form.button.perform = Perform exchange
 
-any.user-account.form.button.update = Update
-
-any.user-account.list.title = Listing of user accounts
-
-any.user-account.list.label.username = Username
-any.user-account.list.label.name = Name
-any.user-account.list.label.surname = Surname
-any.user-account.list.label.roles = Roles
+authenticated.money-exchange.form.label.api-error = Sorry, couldn't perform the exchange
