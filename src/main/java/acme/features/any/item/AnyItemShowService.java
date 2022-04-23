@@ -1,5 +1,7 @@
 package acme.features.any.item;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,16 @@ public class AnyItemShowService implements AbstractShowService<Any, Item> {
 	public boolean authorise(final Request<Item> request) {
 		assert request != null;
 
-		return true;
+		boolean result = false;
+		
+		final Collection<Item> publishedItems = this.repository.findAllIfPublished();
+		final Integer itemId = request.getModel().getInteger("id");
+		final Item item = this.repository.findOneItemById(itemId);
+		if (publishedItems.contains(item)) {
+			result = true;
+		}
+		
+		return result;
 	}
 
 	@Override
@@ -32,7 +43,7 @@ public class AnyItemShowService implements AbstractShowService<Any, Item> {
 		int id;
 		
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneItemByIde(id);
+		result = this.repository.findOneItemById(id);
 		
 		return result;
 	}
@@ -43,7 +54,7 @@ public class AnyItemShowService implements AbstractShowService<Any, Item> {
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "type", "name", "code", "technology", "description", "retailPrice", "optionalLink");
+		request.unbind(entity, model, "type", "name", "code", "technology", "description", "retailPrice", "optionalLink", "published");
 	}
 
 	
