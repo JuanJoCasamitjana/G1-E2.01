@@ -25,9 +25,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-juacasben" action="https://www.reddit.com/r/badfoodporn/comments/g7y69z/made_my_wife_a_derpy_dragon_with_her_bday_waffles/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-andvarbay" action="https://www.youtube.com/watch?v=0iCtC-EOzEo"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-danenrdia" action="https://discord.com"/>
-		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.any.toolkits" action="/any/tool-kit/list"/>
 			<acme:menu-suboption code="master.menu.any.components" action="/any/item/list-component"/>
 			<acme:menu-suboption code="master.menu.any.tools" action="/any/item/list-tool"/>
@@ -51,6 +49,7 @@
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
 			<acme:menu-suboption code="master.menu.patron.patronage" action="/patron/patronage/list"/>
 			<acme:menu-suboption code="master.menu.patron.patronage-report" action="/patron/patronage-report/list"/>
+			<acme:menu-suboption code="master.menu.patron.patron-dashboard" action="/patron/patron-dashboard/show"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -62,6 +61,8 @@
 			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.admin-dashboard" action="/administrator/admin-dashboard/show"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
