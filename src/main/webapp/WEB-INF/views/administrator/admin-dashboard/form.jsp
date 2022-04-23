@@ -30,7 +30,7 @@
 	<jstl:forEach var="averageComponents" items="${ averageRetailPriceComponentsByTechnologyAndCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${averageComponents.key.first} | ${averageComponents.key.second}"/>
+				<acme:print value=" - ${averageComponents.key.first} | ${averageComponents.key.second}"/>
 			</th>
 			<td>
 				<acme:print value="${averageComponents.value}"/>
@@ -48,7 +48,7 @@
 	<jstl:forEach var="deviationComponents" items="${ deviationRetailPriceComponentsByTechnologyAndCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${deviationComponents.key.first} ${deviationComponents.key.second}"/>
+				<acme:print value=" - ${deviationComponents.key.first} ${deviationComponents.key.second}"/>
 			</th>
 			<td>
 				<acme:print value="${deviationComponents.value}"/>
@@ -66,7 +66,7 @@
 	<jstl:forEach var="minimumComponents" items="${ minimumRetailPriceComponentsByTechnologyAndCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${minimumComponents.key.first} ${minimumComponents.key.second}"/>
+				<acme:print value=" - ${minimumComponents.key.first} ${minimumComponents.key.second}"/>
 			</th>
 			<td>
 				<acme:print value="${minimumComponents.value}"/>
@@ -83,7 +83,7 @@
 	<jstl:forEach var="maximumComponents" items="${ maximumRetailPriceComponentsByTechnologyAndCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${maximumComponents.key.first} ${maximumComponents.key.second}"/>
+				<acme:print value=" - ${maximumComponents.key.first} ${maximumComponents.key.second}"/>
 			</th>
 			<td>
 				<acme:print value="${maximumComponents.value}"/>
@@ -116,7 +116,7 @@
 	<jstl:forEach var="averageTools" items="${ averageRetailPriceToolsByCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${averageTools.key}"/>
+				<acme:print value=" - ${averageTools.key}"/>
 			</th>
 			<td>
 				<acme:print value="${averageTools.value}"/>
@@ -133,7 +133,7 @@
 	<jstl:forEach var="deviationTools" items="${ deviationRetailPriceToolsByCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${deviationTools.key}"/>
+				<acme:print value=" - ${deviationTools.key}"/>
 			</th>
 			<td>
 				<acme:print value="${deviationTools.value}"/>
@@ -151,7 +151,7 @@
 	<jstl:forEach var="minimumTools" items="${ minimumRetailPriceToolsByCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${minimumTools.key}"/>
+				<acme:print value=" - ${minimumTools.key}"/>
 			</th>
 			<td>
 				<acme:print value="${minimumTools.value}"/>
@@ -168,7 +168,7 @@
 	<jstl:forEach var="maximumTools" items="${ maximumRetailPriceToolsByCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${maximumTools.key}"/>
+				<acme:print value=" - ${maximumTools.key}"/>
 			</th>
 			<td>
 				<acme:print value="${maximumTools.value}"/>
@@ -189,7 +189,7 @@
 	<jstl:forEach var="countPatronages" items="${ totalNumberPatronagesOfStatus }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${totalNumberPatronagesOfStatus.key}"/>
+				<acme:print value=" - ${totalNumberPatronagesOfStatus.key}"/>
 			</th>
 			<td>
 				<acme:print value="${totalNumberPatronagesOfStatus.value}"/>
@@ -206,7 +206,7 @@
 	<jstl:forEach var="averagePatronages" items="${ averageBudgetPatronagesOfStatus }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${averagePatronages.key}"/>
+				<acme:print value=" - ${averagePatronages.key}"/>
 			</th>
 			<td>
 				<acme:print value="${averagePatronages.value}"/>
@@ -224,7 +224,7 @@
 	<jstl:forEach var="deviationPatronages" items="${ deviationBudgetPatronagesOfStatus }">
 		<tr>	
 			<th scope="row">
-				<acme:print value=" -- ${deviationPatronages.key}"/>
+				<acme:print value=" - ${deviationPatronages.key}"/>
 			</th>
 			<td>
 				<acme:print value="${deviationPatronages.value}"/>
@@ -241,7 +241,7 @@
 	<jstl:forEach var="minimumPatronages" items="${ minimumBudgetPatronagesOfStatus }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${minimumPatronages.key}"/>
+				<acme:print value=" - ${minimumPatronages.key}"/>
 			</th>
 			<td>
 				<acme:print value="${minimumPatronages.value}"/>
@@ -258,7 +258,7 @@
 	<jstl:forEach var="maximumPatronages" items="${ maximumBudgetPatronagesOfStatus }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" -- ${maximumPatronages.key}"/>
+				<acme:print value=" - ${maximumPatronages.key}"/>
 			</th>
 			<td>
 				<acme:print value="${maximumPatronages.value}"/>
