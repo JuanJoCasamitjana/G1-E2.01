@@ -4,5 +4,4 @@ authenticated.announcement.form.label.body = Cuerpo
 authenticated.announcement.form.label.url = URL
 
 authenticated.announcement.list.label.moment = Momento de creacion
-authenticated.announcement.list.label.critical = Criticidad
 authenticated.announcement.list.label.title = Titulo
