@@ -7,4 +7,5 @@ inventor.toolKit.form.label.description = Descripcion
 inventor.toolKit.form.label.assemblyNotes = Notas de Montaje
 inventor.toolKit.form.label.optionalLink = Link
 
-inventor.toolKit.form.button.items = Detalles Items
+inventor.toolKit.form.button.tools = Mis herramientas
+inventor.toolKit.form.button.components = Mis componentes

@@ -22,6 +22,7 @@
 	<acme:input-textbox code="inventor.toolKit.form.label.assemblyNotes" path="assemblyNotes"/>
 	<acme:input-url code="inventor.toolKit.form.label.optionalLink" path="optionalLink"/>
 	
-	<acme:button code="inventor.toolKit.form.button.items" action="/inventor/item/list"/>
+	<acme:button code="inventor.toolKit.form.button.tools" action="/inventor/item/list-tool"/>
+	<acme:button code="inventor.toolKit.form.button.components" action="/inventor/item/list-component"/>
 </acme:form>
 
