@@ -11,10 +11,6 @@
 any.user-account.form.label.username = Username:
 any.user-account.form.label.name = Name:
 any.user-account.form.label.surname = Surname:
-any.user-account.form.label.email = Email:
-any.user-account.form.label.role-list = Roles:
-any.user-account.form.label.status = Status:
-any.user-account.form.label.new-status = New status:
 
 any.user-account.form.button.update = Update
 
@@ -23,3 +19,4 @@ any.user-account.list.title = Listing of user accounts
 any.user-account.list.label.username = Username
 any.user-account.list.label.name = Name
 any.user-account.list.label.surname = Surname
+any.user-account.list.label.roles = Roles

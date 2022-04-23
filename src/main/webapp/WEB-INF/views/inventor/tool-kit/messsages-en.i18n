@@ -1,0 +1,10 @@
+inventor.toolKit.list.label.code = Code
+inventor.toolKit.list.label.title = Title
+
+inventor.toolKit.form.label.code = Code
+inventor.toolKit.form.label.title = Title
+inventor.toolKit.form.label.description = Description
+inventor.toolKit.form.label.assemblyNotes = Assembly Notes
+inventor.toolKit.form.label.optionalLink = Link
+
+inventor.toolKit.form.button.items = Items Details

@@ -20,7 +20,6 @@ import org.springframework.stereotype.Service;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.entities.UserAccount;
-import acme.framework.entities.UserAccountStatus;
 import acme.framework.features.administrator.userAccount.AdministratorUserAccountRepository;
 import acme.framework.roles.Administrator;
 import acme.framework.roles.Anonymous;
@@ -53,9 +52,7 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 		Collection<UserAccount> result;
 
 		result = this.repository.findAllUserAccounts();
-		for (final UserAccount userAccount : result) {
-			userAccount.getRoles().forEach(r -> {});
-		}
+		
 		result.removeIf(x->!x.isEnabled() || x.hasRole(Anonymous.class) || x.hasRole(Administrator.class));
 		
 		return result;
@@ -70,7 +67,7 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 		StringBuilder buffer;
 		Collection<UserRole> roles;
 
-		request.unbind(entity, model, "username", "identity.name", "identity.surname", "identity.email");
+		request.unbind(entity, model, "username", "identity.name", "identity.surname", "identity.email", "users-roles");
 
 		roles = entity.getRoles();
 		buffer = new StringBuilder();
@@ -79,13 +76,7 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 			buffer.append(" ");
 		}
 
-		model.setAttribute("roleList", buffer.toString());
-
-		if (entity.isEnabled()) {
-			model.setAttribute("status", UserAccountStatus.ENABLED);
-		} else {
-			model.setAttribute("status", UserAccountStatus.DISABLED);
-		}
+		model.setAttribute("users-roles", buffer.toString());
 	}
 
 }
