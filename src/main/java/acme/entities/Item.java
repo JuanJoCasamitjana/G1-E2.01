@@ -56,6 +56,8 @@ public class Item  extends AbstractEntity {
 	@URL
 	protected String optionalLink;
 	
+	protected boolean published;
+	
 	// Derived attributes -----------------------------------------------------
 	
 	// Relationships ----------------------------------------------------------

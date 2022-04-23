@@ -11,4 +11,5 @@
 	<acme:list-column code="any.item.list.label.description" path="description" width="10%"/>
 	<acme:list-column code="any.item.list.label.retailPrice" path="retailPrice" width="10%"/>
 	<acme:list-column code="any.item.list.label.optionalLink" path="optionalLink" width="10%"/>
+	<acme:list-column code="any.item.list.label.published" path="published" width="10%"/>
 </acme:list>
