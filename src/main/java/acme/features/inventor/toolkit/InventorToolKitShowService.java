@@ -22,7 +22,18 @@ public class InventorToolKitShowService implements AbstractShowService<Inventor,
 	@Override
 	public boolean authorise(final Request<ToolKit> request) {
 		assert request != null;
-		return true;
+		
+		boolean result = false;
+		
+		final int inventorId = request.getPrincipal().getActiveRoleId();
+		final int id = request.getModel().getInteger("id");
+		final ToolKit tk = this.repository.findOneToolkitById(id);
+		
+		if (tk.getInventor().getId() == inventorId) {
+			result = true;
+		}
+		
+		return result;
 	}
 
 	@Override
