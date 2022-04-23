@@ -55,6 +55,7 @@ master.menu.inventor.patronage = My patronages
 master.menu.patron = Patrons 
 master.menu.patron.patronage = My patronages
 master.menu.patron.patronage-report = My patronage reports
+master.menu.patron.patron-dashboard = Patron Dashboard
 
 # master.menu.administrator ###################################################
 
@@ -65,6 +66,7 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 master.menu.administrator.system-configuration = Configuration
+master.menu.administrator.admin-dashboard = Admin Dashboard
 
 # master.menu.provider ########################################################
 
