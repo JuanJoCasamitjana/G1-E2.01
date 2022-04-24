@@ -1,5 +1,5 @@
 key,creation-moment,title,body,critical,optional-link
-announcement-01,"2020/01/01 10:00","Placeholder Announcement 1","This is the first announcement",false,null
-announcement-02,"2020/01/01 10:00","Placeholder Announcement 2","This is the second announcement",true,null
-announcement-03,"2020/01/01 10:00","Placeholder Announcement 3","This is the third announcement",false,null
-announcement-04,"2020/01/01 10:00","Placeholder Announcement 4","This is the fourth announcement",false,null
+announcement-01,2022/04/21 10:00,Placeholder Announcement 1,This is the first announcement,false,null
+announcement-02,2020/01/01 10:00,Placeholder Announcement 2,This is the second announcement,true,null
+announcement-03,2020/01/01 10:00,Placeholder Announcement 3,This is the third announcement,false,null
+announcement-04,2020/01/01 10:00,Placeholder Announcement 4,This is the fourth announcement,false,null

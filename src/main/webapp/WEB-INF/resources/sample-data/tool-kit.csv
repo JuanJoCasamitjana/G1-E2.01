@@ -1,5 +1,5 @@
-key,code,title,description,assembly-notes,optional-link,published
-tool-kit-01,"TLK-123-A","Desktop","A desktop assembly toolkit","assemble the furniture",null,true
-tool-kit-02,"TLK-123-B","Shelf","A shelf assembly toolkit","assemble the furniture",null,true
-tool-kit-03,"TLK-123-C","Wardrobe","A wardrobe assembly toolkit","assemble the furniture",null,false
-tool-kit-04,"TLK-123-D","General","A general purpose assembly kit","Just do whatever",null,false
+key,key:inventor,code,title,description,assembly-notes,optional-link,published
+tool-kit-01,inventor-01,"TLK-123-A","Desktop","A desktop assembly toolkit","assemble the furniture",null,true
+tool-kit-02,inventor-02,"TLK-123-B","Shelf","A shelf assembly toolkit","assemble the furniture",null,true
+tool-kit-03,inventor-03,"TLK-123-C","Wardrobe","A wardrobe assembly toolkit","assemble the furniture",null,false
+tool-kit-04,inventor-04,"TLK-123-D","General","A general purpose assembly kit","Just do whatever",null,false

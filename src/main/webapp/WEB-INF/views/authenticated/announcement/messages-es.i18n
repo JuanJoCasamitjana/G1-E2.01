@@ -1,8 +1,7 @@
-authenticated.announcement.form.label.title = "Titulo"
-authenticated.announcement.form.label.critical = "Criticidad"
-authenticated.announcement.form.label.body = "Cuerpo"
-authenticated.announcement.form.label.url = "URL"
+authenticated.announcement.form.label.title = Titulo
+authenticated.announcement.form.label.critical = Criticidad
+authenticated.announcement.form.label.body = Cuerpo
+authenticated.announcement.form.label.url = URL
 
-authenticated.announcement.list.label.moment = "Momento de creacion"
-authenticated.announcement.list.label.critical = "Criticidad"
-authenticated.announcement.list.label.title = "Titulo"
+authenticated.announcement.list.label.moment = Momento de creacion
+authenticated.announcement.list.label.title = Titulo
