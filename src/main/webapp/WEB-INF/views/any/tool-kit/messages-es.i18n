@@ -21,3 +21,15 @@ any.tool-kit.list.label.title = Titulo
 any.tool-kit.list.label.description = Descripcion
 any.tool-kit.list.label.assembly-notes = Notas de Montaje
 any.tool-kit.list.label.optional-link = Enlace Opcional
+any.tool-kit.list.label.price = Precio
+
+any.tool-kit.form.label.item-name = Nombre:
+any.tool-kit.form.label.item-code = Codigo:
+any.tool-kit.form.label.item-technology = Tecnologia:
+any.tool-kit.form.label.item-description = Descripcion:
+any.tool-kit.form.label.item-retail-price = Precio:
+any.tool-kit.form.label.item-optional-link = Enlace Opcional:
+any.tool-kit.form.label.item-amount = Cantidad:
+
+any.tool-kit.form.label.tool = Herramienta:
+any.tool-kit.form.label.component = Componente:

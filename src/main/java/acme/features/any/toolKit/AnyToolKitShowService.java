@@ -12,9 +12,13 @@
 
 package acme.features.any.toolKit;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.ItemType;
+import acme.entities.Quantity;
 import acme.entities.ToolKit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -58,7 +62,14 @@ public class AnyToolKitShowService implements AbstractShowService<Any, ToolKit> 
 		assert entity != null;
 		assert model != null;
 
-		model.setAttribute("canUpdate", true);
+		Collection<Quantity> tools, components;
+		tools = components = this.repository.findAllItemsFromToolKitById(entity.getId());
+		
+		tools.removeIf(x->x.getItem().getType().equals(ItemType.COMPONENT));
+		components.removeIf(x->x.getItem().getType().equals(ItemType.TOOL));
+		
+		model.setAttribute("toolKitTools", tools);
+		model.setAttribute("toolKitComponents", components);
 		
 		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "optionalLink");
 	}

@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.Item;
+import acme.entities.Quantity;
 import acme.entities.ToolKit;
 import acme.framework.repositories.AbstractRepository;
 
@@ -27,10 +28,13 @@ public interface AnyToolKitRepository extends AbstractRepository {
 	@Query("select tk from ToolKit tk where tk.id = :id")
 	ToolKit findOneToolKitById(int id);
 
-	@Query("select tk from ToolKit tk")
+	@Query("select tk from ToolKit tk where tk.published=1")
 	Collection<ToolKit> findAllToolKits();
 	
 	@Query("select it from Item it")
 	Collection<Item> findAllItems();
+	
+	@Query("select q from Quantity q where q.toolKit.id =:id")
+	Collection<Quantity> findAllItemsFromToolKitById(int id);
 
 }

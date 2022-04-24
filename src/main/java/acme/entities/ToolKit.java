@@ -5,6 +5,7 @@ package acme.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -44,4 +45,7 @@ public class ToolKit extends AbstractEntity{
 	
 	@URL
 	protected String optionalLink;
+	
+	@NotNull
+	protected boolean published;
 }
