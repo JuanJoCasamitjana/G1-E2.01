@@ -16,9 +16,8 @@ public class AnyUserAccountListShowTest extends TestHarness {
 	@CsvFileSource(resources = "/any/userAccount/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String name, final String surname, final String username, final String roles) {
-		super.signIn("inventor1", "inventor1");
 		
-		super.clickOnMenu("All", "Users");
+		super.clickOnMenu("Anonymous", "Users");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		
@@ -26,15 +25,14 @@ public class AnyUserAccountListShowTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 1, surname);
 		super.checkColumnHasValue(recordIndex, 2, username);
 		super.checkColumnHasValue(recordIndex, 3, roles);
-//
-//		super.clickOnListingRecord(recordIndex);
-//		super.checkFormExists();
-//		super.checkInputBoxHasValue("name", name);
-//		super.checkInputBoxHasValue("surname", surname);
-//		super.checkInputBoxHasValue("username", username);
-//		super.checkInputBoxHasValue("roles", roles);
 
-		super.signOut();
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.checkInputBoxHasValue("username", username);
+		super.checkInputBoxHasValue("identity.name", name);
+		super.checkInputBoxHasValue("identity.surname", surname);
+		super.checkInputBoxHasValue("roleList", roles);
+
 	}
 
 	// Ancillary methods ------------------------------------------------------
