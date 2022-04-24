@@ -15,10 +15,9 @@ public class AnyItemComponentListShowTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/item/list-component.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String type, final String name, final String code, final String technology, final String description, final String retailPrice, final String optionalLink) {
+	public void positiveTest(final int recordIndex, final String type, final String name, final String code, final String technology, final String description, final String retailPrice, final String optionalLink, final String published) {
 
-		super.signIn("inventor1", "inventor1");
-		super.clickOnMenu("All", "Published components");
+		super.clickOnMenu("Anonymous", "Published components");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
 		
@@ -29,6 +28,7 @@ public class AnyItemComponentListShowTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 4, description);
 		super.checkColumnHasValue(recordIndex, 5, retailPrice);
 		super.checkColumnHasValue(recordIndex, 6, optionalLink);
+		super.checkColumnHasValue(recordIndex, 7, published);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -39,8 +39,8 @@ public class AnyItemComponentListShowTest extends TestHarness {
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("retailPrice", retailPrice);
 		super.checkInputBoxHasValue("optionalLink", optionalLink);
+		super.checkInputBoxHasValue("published", published);
 
-		super.signOut();
 
 	}
 
