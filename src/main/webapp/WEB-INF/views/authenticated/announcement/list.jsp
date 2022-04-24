@@ -5,6 +5,6 @@
 
 <acme:list>
 	<acme:list-column code="authenticated.announcement.list.label.title" path="title" width="70%"/>
-	<acme:list-column code="authenticated.announcement.list.label.moment" path="creationMoment" width="30%"/>
-
+	<acme:list-column code="authenticated.announcement.list.label.moment" path="creationMoment" width="20%"/>
+	<acme:list-column code="authenticated.announcement.list.label.critical" path="critical" width="10%"/>
 </acme:list>
