@@ -36,6 +36,12 @@
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.announcements" action="/authenticated/announcement/listRecent"/>
 			<acme:menu-suboption code="master.menu.authenticated.system-configuration" action="/authenticated/system-configuration/show"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.any.toolkits" action="/any/tool-kit/list"/>
+			<acme:menu-suboption code="master.menu.any.components" action="/any/item/list-component"/>
+			<acme:menu-suboption code="master.menu.any.tools" action="/any/item/list-tool"/>
+			<acme:menu-suboption code="master.menu.any.chirps" action="/any/chirp/list"/>
+			<acme:menu-suboption code="master.menu.any.user-accounts" action="/any/user-account/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">

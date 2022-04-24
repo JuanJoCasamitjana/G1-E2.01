@@ -1,7 +1,4 @@
-recordIndex,type,name,code,technology,description,retail-price,optional-link
-0,COMPONENT,Board,COM-123-E,placeholder technology,A 5m x 5m wooden board,EUR 50.00,
-1,COMPONENT,Clip,COM-123-C,placeholder technology,A paper clip,EUR 0.05,
-2,COMPONENT,Nail,COM-123-B,placeholder technology,A 5 cm nail,EUR 0.15,
-3,COMPONENT,Screw,COM-123-A,placeholder technology,A flat head screw,EUR 0.20,
-4,COMPONENT,Staple,COM-123-D,placeholder technology,An office staple,EUR 0.01,
+recordIndex,type,name,code,technology,description,retail-price,optional-link,published
+0,COMPONENT,Board,COM-123-E,placeholder technology,A 5m x 5m wooden board,EUR 50.00,,true
+1,COMPONENT,Screw,COM-123-A,placeholder technology,A flat head screw,EUR 0.20,,true
 
