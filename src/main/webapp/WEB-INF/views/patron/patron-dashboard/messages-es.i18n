@@ -1,0 +1,7 @@
+patron.patron-dashboard.form.title = Metricas de Patronos
+
+patron.patron-dashboard.form.count-patronages = Numero total de patrocinios por estado
+patron.patron-dashboard.form.average-patronages = Presupuesto medio de patrocinios por estado y divisa
+patron.patron-dashboard.form.deviation-patronages = Desviacion tipica del presupuesto de patrocinios por estado y divisa
+patron.patron-dashboard.form.minimum-patronages = Minimo presupuesto de patrocinios por estado y divisa
+patron.patron-dashboard.form.maximum-patronages = Maximo presupuesto de patrocinios por estado y divisa

@@ -1,0 +1,20 @@
+administrator.admin-dashboard.form.components = Metricas de Componentes
+administrator.admin-dashboard.form.tools = Metricas de Herramientas
+administrator.admin-dashboard.form.patronages = Metricas de Patrocinios
+
+administrator.admin-dashboard.form.title = Metricas de Administrador
+administrator.admin-dashboard.form.count-components = Numero Total de Componentes
+administrator.admin-dashboard.form.average-components = Precio de venta medio de componentes por tecnologia y divisa
+administrator.admin-dashboard.form.deviation-components = Desviacion tipica del precio de venta de componentes por tecnologia y divisa
+administrator.admin-dashboard.form.minimum-components = Minimo precio de venta de componentes por tecnologia y divisa
+administrator.admin-dashboard.form.maximum-components = Maximo precio de venta de componentes por tecnologia y divisa
+administrator.admin-dashboard.form.count-tools = Numero Total de Herramientas
+administrator.admin-dashboard.form.average-tools = Precio de venta medio de herramientas por divisa
+administrator.admin-dashboard.form.deviation-tools = Desviacion tipica del precio de venta de herramientas por divisa
+administrator.admin-dashboard.form.minimum-tools = Minimo precio de venta de herramientas por divisa
+administrator.admin-dashboard.form.maximum-tools = Maximo precio de venta de herramientas por divisa
+administrator.admin-dashboard.form.count-patronages = Numero Total de patrocinios por estado
+administrator.admin-dashboard.form.average-patronages =  Presupuesto medio de patrocinios por estado
+administrator.admin-dashboard.form.deviation-patronages = Desviacion tipica del presupuesto de patrocinios por estado
+administrator.admin-dashboard.form.minimum-patronages = Minimo presupuesto de patrocinios por estado
+administrator.admin-dashboard.form.maximum-patronages = Maximo presupuesto de patrocinios por estado

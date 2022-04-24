@@ -1,0 +1,3 @@
+authenticated.system-configuration.form.label.defaultSystemCurrency = Monedas predeterminada
+authenticated.system-configuration.form.label.acceptedCurrencies = Monedas aceptadas
+authenticated.system-configuration.form.label.money-exchange = Servicio de cambio de moneda

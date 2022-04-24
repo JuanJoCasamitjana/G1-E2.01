@@ -1,0 +1,11 @@
+inventor.toolKit.list.label.code = Codigo
+inventor.toolKit.list.label.title = Titulo
+
+inventor.toolKit.form.label.code = Codigo
+inventor.toolKit.form.label.title = Titulo
+inventor.toolKit.form.label.description = Descripcion
+inventor.toolKit.form.label.assemblyNotes = Notas de Montaje
+inventor.toolKit.form.label.optionalLink = Link
+
+inventor.toolKit.form.button.tools = Mis herramientas
+inventor.toolKit.form.button.components = Mis componentes

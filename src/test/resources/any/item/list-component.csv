@@ -1,0 +1,4 @@
+recordIndex,type,name,code,technology,description,retail-price,optional-link,published
+0,COMPONENT,Board,COM-123-E,placeholder technology,A 5m x 5m wooden board,EUR 50.00,,true
+1,COMPONENT,Screw,COM-123-A,placeholder technology,A flat head screw,EUR 0.20,,true
+

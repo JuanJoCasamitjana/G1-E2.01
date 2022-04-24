@@ -1,0 +1,5 @@
+recordIndex,type,name,code,technology,description,retail-price,optional-link,published
+0,"TOOL","Electric drill","TOL-123-A","placeholder technology","An electric drill","EUR 123.45",,true
+1,"TOOL","Hammer","TOL-123-B","placeholder technology","A mallet","EUR 15.00",,true
+2,"TOOL","Measuring tape","TOL-123-E","placeholder technology","A 10m measuring tape","EUR 4.99",,true
+

@@ -1,0 +1,7 @@
+patron.patron-dashboard.form.title = Patrons Metrics
+
+patron.patron-dashboard.form.count-patronages = Total number of patronages of status
+patron.patron-dashboard.form.average-patronages = Average budget of patronages by status and currency
+patron.patron-dashboard.form.deviation-patronages = Deviation budget of patronages by status and currency
+patron.patron-dashboard.form.minimum-patronages = Minimum budget of patronages by status and currency
+patron.patron-dashboard.form.maximum-patronages = Maximum budget of patronages by status and currency
