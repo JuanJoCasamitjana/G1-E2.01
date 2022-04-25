@@ -50,8 +50,6 @@ public class ToolKit extends AbstractEntity{
 	protected String optionalLink;
 	
 	@NotNull
-	protected boolean published;
-	
 	@Valid
 	@ManyToOne(optional = false)
 	protected Inventor inventor;

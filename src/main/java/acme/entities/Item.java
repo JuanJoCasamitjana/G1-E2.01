@@ -53,11 +53,10 @@ public class Item  extends AbstractEntity {
 	@Valid
 	protected Money retailPrice;
 	
-	@NotNull
-	protected boolean published;
-	
 	@URL
 	protected String optionalLink;
+	
+	protected boolean published;
 	
 	// Derived attributes -----------------------------------------------------
 	
