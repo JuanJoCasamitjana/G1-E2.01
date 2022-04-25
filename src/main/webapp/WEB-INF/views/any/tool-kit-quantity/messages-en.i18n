@@ -1,0 +1,18 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+any.tool-kit.list.title = Listing of tools and components of the tool kit:
+
+any.tool-kit-quantity.list.label.name = Name
+any.tool-kit-quantity.list.label.type = Item type
+any.tool-kit-quantity.list.label.code = Code
+any.tool-kit-quantity.list.label.technology = Technology
+any.tool-kit-quantity.list.label.retail-price = Retail Price
+any.tool-kit-quantity.list.label.amount = Amount in the tool kit
