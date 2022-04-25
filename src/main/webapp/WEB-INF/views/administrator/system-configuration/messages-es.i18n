@@ -1,0 +1,6 @@
+administrator.system-configuration.form.label.default-system-currency = Moneda Predeterminada
+administrator.system-configuration.form.label.accepted-currencies = Monedas Aceptadas
+administrator.system-configuration.form.label.strong-spam-terms = Terminos de Spam Fuertes
+administrator.system-configuration.form.label.strong-spam-threshold = Umbral de Spam Fuerte
+administrator.system-configuration.form.label.weak-spam-terms = Terminos de Spam Debiles
+administrator.system-configuration.form.label.weak-spam-threshold = Umbral de Spam Debil
