@@ -1,11 +1,11 @@
 key,key:inventor,type,name,code,technology,description,retail-price,optional-link,published
-item-01,inventor-01,"TOOL","Electric drill","TOL-123-A","placeholder technology","An electric drill","EUR 123.45",null,true
-item-02,inventor-02,"TOOL","Hammer","TOL-123-B","placeholder technology","A mallet","EUR 15.00",null,true
-item-03,inventor-03,"TOOL","Screwdriver","TOL-123-C","placeholder technology","A flat head screwdriver","EUR 10.00",null,false
-item-04,inventor-04,"TOOL","Nail gun","TOL-123-D","placeholder technology","A nail gun","EUR 89.99",null,false
-item-05,inventor-01,"TOOL","Measuring tape","TOL-123-E","placeholder technology","A 10m measuring tape","EUR 4.99",null,true
-item-06,inventor-02,"COMPONENT","Screw","COM-123-A","placeholder technology","A flat head screw","EUR 0.20",null,true
-item-07,inventor-03,"COMPONENT","Nail","COM-123-B","placeholder technology","A 5 cm nail","EUR 0.15",null,false
-item-08,inventor-04,"COMPONENT","Clip","COM-123-C","placeholder technology","A paper clip","EUR 0.05",null,false
-item-09,inventor-01,"COMPONENT","Staple","COM-123-D","placeholder technology","An office staple","EUR 0.01",null,false
-item-10,inventor-02,"COMPONENT","Board","COM-123-E","placeholder technology","A 5m x 5m wooden board","EUR 50.00",null,true
+item-01,inventor-01,"TOOL","Electric drill","TOL-123-A","placeholder technology","An electric drill","EUR 123.45",null,True
+item-02,inventor-02,"TOOL","Hammer","TOL-123-B","placeholder technology","A mallet","EUR 15.00",null,True
+item-03,inventor-03,"TOOL","Screwdriver","TOL-123-C","placeholder technology","A flat head screwdriver","EUR 10.00",null,True
+item-04,inventor-04,"TOOL","Nail gun","TOL-123-D","placeholder technology","A nail gun","EUR 89.99",null,True
+item-05,inventor-01,"TOOL","Measuring tape","TOL-123-E","placeholder technology","A 10m measuring tape","EUR 4.99",null,True
+item-06,inventor-02,"COMPONENT","Screw","COM-123-A","placeholder technology","A flat head screw","EUR 0.20",null,False
+item-07,inventor-03,"COMPONENT","Nail","COM-123-B","placeholder technology","A 5 cm nail","EUR 0.15",null,False
+item-08,inventor-04,"COMPONENT","Clip","COM-123-C","placeholder technology","A paper clip","EUR 0.05",null,False
+item-09,inventor-01,"COMPONENT","Staple","COM-123-D","placeholder technology","An office staple","EUR 0.01",null,False
+item-10,inventor-02,"COMPONENT","Board","COM-123-E","placeholder technology","A 5m x 5m wooden board","EUR 50.00",null,False
