@@ -10,65 +10,76 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.any.toolKit;
+package acme.features.any.toolKitQuantity;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.ToolKit;
+import acme.entities.Item;
+import acme.entities.Quantity;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnyToolKitListFilterService implements AbstractListService<Any, ToolKit> {
+public class AnyToolKitQuantityListService implements AbstractListService<Any, Quantity> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnyToolKitRepository repository;
+	protected AnyToolKitQuantityRepository repository;
 
 	// AbstractListService<Administrator, UserAccount> interface --------------
 
 
 	@Override
-	public boolean authorise(final Request<ToolKit> request) {
+	public boolean authorise(final Request<Quantity> request) {
 		assert request != null;
 
 		return true;
 	}
 	
 	@Override
-	public Collection<ToolKit> findMany(final Request<ToolKit> request) {
+	public Collection<Quantity> findMany(final Request<Quantity> request) {
 		assert request != null;
+
+		Collection<Quantity> result;
+		int id;
 		
-		final Model model = request.getModel();
-		
-		final Collection<String> attrs = model.getAttributes();
-		
-		for(final String attr : attrs) {
-			System.out.println(attr + ": " + model.getAttribute(attr));
-		}
-		
-		Collection<ToolKit> result;
-		
-		result = this.repository.findAllToolKits();
-		
+		id = request.getModel().getInteger("id");
+		result = this.repository.findAllItemsFromToolKitById(id);
 		
 		return result;
 	}
 	
 	@Override
-	public void unbind(final Request<ToolKit> request, final ToolKit entity, final Model model) {
+	public void unbind(final Request<Quantity> request, final Quantity entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
+		Money itemPrice;
+		String itemName, itemType, itemCode, itemTechnology;
 		
-		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "optionalLink");
+		final Item it = entity.getItem();
+		
+		itemName = it.getName();
+		itemCode = it.getCode();
+		itemType = it.getType().toString();
+		itemTechnology = it.getTechnology();
+		itemPrice = it.getRetailPrice();
+		
+		model.setAttribute("name", itemName);
+		model.setAttribute("code", itemCode);
+		model.setAttribute("type", itemType);
+		model.setAttribute("technology", itemTechnology);
+		model.setAttribute("price", itemPrice);
+		
+		request.unbind(entity, model, "amount");
 	}
 
 }

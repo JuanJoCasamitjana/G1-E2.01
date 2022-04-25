@@ -10,43 +10,32 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.any.toolKit;
+package acme.features.any.toolKitQuantity;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.ToolKit;
+import acme.entities.Quantity;
 import acme.framework.controllers.AbstractController;
 import acme.framework.roles.Any;
 
 @Controller
-@RequestMapping("/any/tool-kit/")
-public class AnyToolKitController extends AbstractController<Any, ToolKit> {
+public class AnyToolKitQuantityController extends AbstractController<Any, Quantity> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnyToolKitListService	listService;
-	
-	@Autowired
-	protected AnyToolKitFilterListService	listFilterService;
-	
-	@Autowired
-	protected AnyToolKitShowService	showService;
-	
-	
-	
+	protected AnyToolKitQuantityListService	listService;
+
+
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.listService);
-		super.addCommand("list-filter", "list", this.listFilterService);
-		super.addCommand("show", this.showService);
 	}
 
 }

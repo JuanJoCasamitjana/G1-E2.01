@@ -17,8 +17,9 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="any.tool-kit.list.label.code" path="code"/>
-	<acme:list-column code="any.tool-kit.list.label.title" path="title"/>
-	<acme:list-column code="any.tool-kit.list.label.price" path="toolKitPrice"/>
-	
+	<acme:list-column code="any.tool-kit-filter.list.label.code" path="code"/>
+	<acme:list-column code="any.tool-kit-filter.list.label.title" path="title"/>
+	<acme:list-column code="any.tool-kit-filter.list.label.description" path="description"/>
+	<acme:list-column code="any.tool-kit-filter.list.label.assembly-notes" path="assemblyNotes"/>
+	<acme:list-column code="any.tool-kit-filter.list.label.optional-link" path="optionalLink"/>
 </acme:list>

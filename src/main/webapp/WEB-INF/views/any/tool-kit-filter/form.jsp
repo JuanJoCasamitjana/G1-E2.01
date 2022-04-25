@@ -16,13 +16,13 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:input-textbox code="any.tool-kit.form.label.code" path="code"/>
-	<acme:input-textbox code="any.tool-kit.form.label.title" path="title"/>
-	<acme:input-textbox code="any.tool-kit.form.label.description" path="description"/>
-	<acme:input-textbox code="any.tool-kit.form.label.assembly-notes" path="assemblyNotes"/>
+	<acme:input-textbox code="any.tool-kit-filter.form.label.code" path="code"/>
+	<acme:input-textbox code="any.tool-kit-filter.form.label.title" path="title"/>
+	<acme:input-textbox code="any.tool-kit-filter.form.label.description" path="description"/>
+	<acme:input-textbox code="any.tool-kit-filter.form.label.assembly-notes" path="assemblyNotes"/>
 	<jstl:if test="${optionalLink!=null}">
-		<acme:input-textbox code="any.tool-kit.form.label.optional-link" path="optionalLink"/>
+		<acme:input-textbox code="any.tool-kit-filter.form.label.optional-link" path="optionalLink"/>
 	</jstl:if>
 	
-	<acme:button code="any.tool-kit.form.label.items" action="/any/quantity/list?id=${id}"/>
+	<acme:button code="any.tool-kit-filter.form.label.items" action="/any/tool-kit-items/list?id=${toolKitId}"/>
 </acme:form>

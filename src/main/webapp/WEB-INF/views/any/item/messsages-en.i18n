@@ -15,3 +15,5 @@ any.item.form.label.description = Description
 any.item.form.label.retailPrice = Retail Price
 any.item.form.label.optionalLink = Optional Link
 any.item.form.label.published = Published
+
+any.item.form.label.tool-kit-filter = Tool Kits with this item

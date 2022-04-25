@@ -16,9 +16,11 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:list>
-	<acme:list-column code="any.tool-kit.list.label.code" path="code"/>
-	<acme:list-column code="any.tool-kit.list.label.title" path="title"/>
-	<acme:list-column code="any.tool-kit.list.label.price" path="toolKitPrice"/>
-	
+<acme:list readonly="true">
+	<acme:list-column code="any.tool-kit-quantity.list.label.type" path="type"/>
+	<acme:list-column code="any.tool-kit-quantity.list.label.name" path="name"/>
+	<acme:list-column code="any.tool-kit-quantity.list.label.code" path="code"/>
+	<acme:list-column code="any.tool-kit-quantity.list.label.technology" path="technology"/>
+	<acme:list-column code="any.tool-kit-quantity.list.label.retail-price" path="price"/>
+	<acme:list-column code="any.tool-kit-quantity.list.label.amount" path="amount"/>
 </acme:list>

@@ -28,7 +28,7 @@ import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnyToolKitListService implements AbstractListService<Any, ToolKit> {
+public class AnyToolKitFilterListService implements AbstractListService<Any, ToolKit> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -51,7 +51,10 @@ public class AnyToolKitListService implements AbstractListService<Any, ToolKit> 
 		assert request != null;
 
 		Collection<ToolKit> result;
-		result = this.repository.findAllToolKits();
+		int id;
+		
+		id = request.getModel().getInteger("id");
+		result = this.repository.findAllToolKitsWithItemById(id);
 		
 		return result;
 	}
@@ -105,7 +108,7 @@ public class AnyToolKitListService implements AbstractListService<Any, ToolKit> 
 		price.setAmount(value);
 		model.setAttribute("toolKitPrice", price);
 		
-		request.unbind(entity, model, "code", "title");
+		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "optionalLink", "components", "tools");
 	}
 
 }

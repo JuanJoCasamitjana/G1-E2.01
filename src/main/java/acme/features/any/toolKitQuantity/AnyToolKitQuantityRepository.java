@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.any.toolKit;
+package acme.features.any.toolKitQuantity;
 
 import java.util.Collection;
 
@@ -19,25 +19,21 @@ import org.springframework.stereotype.Repository;
 
 import acme.entities.Item;
 import acme.entities.Quantity;
-import acme.entities.ToolKit;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AnyToolKitRepository extends AbstractRepository {
+public interface AnyToolKitQuantityRepository extends AbstractRepository {
 
-	@Query("select tk from ToolKit tk where tk.id = :id")
-	ToolKit findOneToolKitById(int id);
+	@Query("select q from Quantity q where q.id = :id")
+	Quantity findOneQuantityById(int id);
 
-	@Query("select tk from ToolKit tk where tk.published=1")
-	Collection<ToolKit> findAllToolKits();
-	
-	@Query("select q.toolKit from Quantity q where q.toolKit.published=1 and q.item.id =:id")
-	Collection<ToolKit> findAllToolKitsWithItemById(int id);
+	@Query("select q from Quantity q where q.toolKit.published=1")
+	Collection<Quantity> findAllQuantities();
 	
 	@Query("select it from Item it")
 	Collection<Item> findAllItems();
 	
-	@Query("select q from Quantity q where q.toolKit.id =:id")
+	@Query("select q from Quantity q where q.toolKit.id =:id and q.toolKit.published=1")
 	Collection<Quantity> findAllItemsFromToolKitById(int id);
 
 }
