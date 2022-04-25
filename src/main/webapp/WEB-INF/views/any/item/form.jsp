@@ -15,4 +15,6 @@
 	<acme:input-money code="any.item.form.label.retailPrice" path="retailPrice"/>
 	<acme:input-textbox code="any.item.form.label.optionalLink" path="optionalLink"/>
 	<acme:input-textbox code="any.item.form.label.published" path="published"/>
+	
+	<acme:link code="any.item.form.label.tool-kit-filter" action="/any/tool-kit/list-filter?id=${ id }"/>
 </acme:form>
