@@ -16,14 +16,12 @@ public class AuthenticatedAnnouncementShowService implements AbstractShowService
 	
 	@Override
 	public boolean authorise(final Request<Announcement> request) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		return true;
 	}
 
 	@Override
 	public Announcement findOne(final Request<Announcement> request) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		Announcement result;
 		int id;
@@ -34,7 +32,6 @@ public class AuthenticatedAnnouncementShowService implements AbstractShowService
 
 	@Override
 	public void unbind(final Request<Announcement> request, final Announcement entity, final Model model) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert model != null;

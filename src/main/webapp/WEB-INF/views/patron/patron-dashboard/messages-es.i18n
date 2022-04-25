@@ -5,3 +5,9 @@ patron.patron-dashboard.form.average-patronages = Presupuesto medio de patrocini
 patron.patron-dashboard.form.deviation-patronages = Desviacion tipica del presupuesto de patrocinios por estado y divisa
 patron.patron-dashboard.form.minimum-patronages = Minimo presupuesto de patrocinios por estado y divisa
 patron.patron-dashboard.form.maximum-patronages = Maximo presupuesto de patrocinios por estado y divisa
+
+patron.patron-dashboard.form.count-patronages-caption = El numero total de patrocinios agrupado por estado
+patron.patron-dashboard.form.average-patronages-caption = El presupuesto medio de patrocinios agrupado por estado y divisa
+patron.patron-dashboard.form.deviation-patronages-caption = La desviacion tipica del presupuesto de patrocinios agrupado por estado y divisa
+patron.patron-dashboard.form.minimum-patronages-caption = El minimo presupuesto de patrocinios agrupado por estado y divisa
+patron.patron-dashboard.form.maximum-patronages-caption = El maximo presupuesto de patrocinios agrupado por estado y divisa

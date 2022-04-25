@@ -17,7 +17,6 @@ public class AuthenticatedSystemConfigrationCurrenciesService implements Abstrac
 
 	@Override
 	public boolean authorise(final Request<SystemConfiguration> request) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		
 		return true;
@@ -25,7 +24,6 @@ public class AuthenticatedSystemConfigrationCurrenciesService implements Abstrac
 
 	@Override
 	public SystemConfiguration findOne(final Request<SystemConfiguration> request) {
-		// TODO Auto-generated method stub
 		
 		SystemConfiguration sysConf;
 		sysConf = this.repository.getSystemConfiguration();
@@ -35,7 +33,6 @@ public class AuthenticatedSystemConfigrationCurrenciesService implements Abstrac
 
 	@Override
 	public void unbind(final Request<SystemConfiguration> request, final SystemConfiguration entity, final Model model) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert model != null;

@@ -26,7 +26,6 @@ public class AuthenticatedAnnouncementListRecentService implements AbstractListS
 
 	@Override
 	public Collection<Announcement> findMany(final Request<Announcement> request) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		Collection<Announcement> result;
 		Calendar calendar;
@@ -42,7 +41,6 @@ public class AuthenticatedAnnouncementListRecentService implements AbstractListS
 
 	@Override
 	public void unbind(final Request<Announcement> request, final Announcement entity, final Model model) {
-		// TODO Auto-generated method stub
 		assert entity != null;
 		assert model != null;
 		assert request != null;
