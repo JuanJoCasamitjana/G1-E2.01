@@ -1,3 +1,9 @@
 recordIndex,name,surname,username,roles
-0,Pedro,Seda,inventor1,Inventor
-1,Roberto,Bru,patron1,Patron
+0,Alberto,Hernandez,inventor2,Inventor
+1,Daniel,Gallardo,patron4,Patron
+2,Javier,Guerra,patron2,Patron
+3,Manuel,Bond,inventor3,Inventor
+4,Pedro,Seda,inventor1,Inventor
+5,Roberto,Bru,patron1,Patron
+6,Rodolfo,Garcia,inventor4,Inventor
+7,Yoel,Ortiz,patron3,Patron

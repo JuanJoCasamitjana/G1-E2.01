@@ -5,3 +5,4 @@ authenticated.announcement.form.label.url = URL
 
 authenticated.announcement.list.label.moment = Momento de creacion
 authenticated.announcement.list.label.title = Titulo
+authenticated.announcement.list.label.critical = Criticidad

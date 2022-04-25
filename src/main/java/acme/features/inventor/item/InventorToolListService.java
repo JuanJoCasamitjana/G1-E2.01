@@ -18,7 +18,6 @@ public class InventorToolListService implements AbstractListService<Inventor,Ite
 	protected InventorItemRepository repository;
 	@Override
 	public boolean authorise(final Request<Item> request) {
-		// TODO Auto-generated method stub
 		assert request != null;
 
 		return true;
@@ -26,7 +25,6 @@ public class InventorToolListService implements AbstractListService<Inventor,Ite
 
 	@Override
 	public Collection<Item> findMany(final Request<Item> request) {
-		// TODO Auto-generated method stub
 		int id;
 		Collection<Item> result;
 		
@@ -38,7 +36,6 @@ public class InventorToolListService implements AbstractListService<Inventor,Ite
 
 	@Override
 	public void unbind(final Request<Item> request, final Item entity, final Model model) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert model != null;

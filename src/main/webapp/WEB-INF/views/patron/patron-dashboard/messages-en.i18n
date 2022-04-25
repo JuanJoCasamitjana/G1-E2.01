@@ -5,3 +5,9 @@ patron.patron-dashboard.form.average-patronages = Average budget of patronages b
 patron.patron-dashboard.form.deviation-patronages = Deviation budget of patronages by status and currency
 patron.patron-dashboard.form.minimum-patronages = Minimum budget of patronages by status and currency
 patron.patron-dashboard.form.maximum-patronages = Maximum budget of patronages by status and currency
+
+patron.patron-dashboard.form.count-patronages-caption = The total number of patronages grouped by status
+patron.patron-dashboard.form.average-patronages-caption =The average budget of patronages grouped by status and currency
+patron.patron-dashboard.form.deviation-patronages-caption = The standard deviation budget of patronages grouped by status and currency
+patron.patron-dashboard.form.minimum-patronages-caption = The minimum budget of patronages grouped by status and currency
+patron.patron-dashboard.form.maximum-patronages-caption = The maximum budget of patronages grouped by status and currency

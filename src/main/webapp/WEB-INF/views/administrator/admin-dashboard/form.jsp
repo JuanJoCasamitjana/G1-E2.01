@@ -12,6 +12,9 @@
 </h2>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.count-components-caption"/>
+	</caption>
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.admin-dashboard.form.count-components"/>
@@ -27,6 +30,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.average-components-caption"/>
+	</caption>
 	<jstl:forEach var="averageComponents" items="${ averageRetailPriceComponentsByTechnologyAndCurrency }">
 		<tr>
 			<th scope="row">
@@ -45,10 +51,13 @@
 </h3>
 
 <table class="table table-sm">
+<caption>
+		<acme:message code="administrator.admin-dashboard.form.deviation-components-caption"/>
+	</caption>
 	<jstl:forEach var="deviationComponents" items="${ deviationRetailPriceComponentsByTechnologyAndCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" - ${deviationComponents.key.first} ${deviationComponents.key.second}"/>
+				<acme:print value=" - ${deviationComponents.key.first} | ${deviationComponents.key.second}"/>
 			</th>
 			<td>
 				<acme:print value="${deviationComponents.value}"/>
@@ -63,10 +72,13 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.minimum-components-caption"/>
+	</caption>
 	<jstl:forEach var="minimumComponents" items="${ minimumRetailPriceComponentsByTechnologyAndCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" - ${minimumComponents.key.first} ${minimumComponents.key.second}"/>
+				<acme:print value=" - ${minimumComponents.key.first} | ${minimumComponents.key.second}"/>
 			</th>
 			<td>
 				<acme:print value="${minimumComponents.value}"/>
@@ -80,10 +92,13 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.maximum-components-caption"/>
+	</caption>
 	<jstl:forEach var="maximumComponents" items="${ maximumRetailPriceComponentsByTechnologyAndCurrency }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" - ${maximumComponents.key.first} ${maximumComponents.key.second}"/>
+				<acme:print value=" - ${maximumComponents.key.first} | ${maximumComponents.key.second}"/>
 			</th>
 			<td>
 				<acme:print value="${maximumComponents.value}"/>
@@ -98,6 +113,9 @@
 </h2>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.count-tools-caption"/>
+	</caption>
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.admin-dashboard.form.count-tools"/>
@@ -113,6 +131,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.average-tools-caption"/>
+	</caption>
 	<jstl:forEach var="averageTools" items="${ averageRetailPriceToolsByCurrency }">
 		<tr>
 			<th scope="row">
@@ -130,6 +151,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.deviation-tools-caption"/>
+	</caption>
 	<jstl:forEach var="deviationTools" items="${ deviationRetailPriceToolsByCurrency }">
 		<tr>
 			<th scope="row">
@@ -148,6 +172,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.minimum-tools-caption"/>
+	</caption>
 	<jstl:forEach var="minimumTools" items="${ minimumRetailPriceToolsByCurrency }">
 		<tr>
 			<th scope="row">
@@ -165,6 +192,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.maximum-tools-caption"/>
+	</caption>
 	<jstl:forEach var="maximumTools" items="${ maximumRetailPriceToolsByCurrency }">
 		<tr>
 			<th scope="row">
@@ -186,13 +216,16 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.count-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="countPatronages" items="${ totalNumberPatronagesOfStatus }">
 		<tr>
 			<th scope="row">
-				<acme:print value=" - ${totalNumberPatronagesOfStatus.key}"/>
+				<acme:print value=" - ${countPatronages.key}"/>
 			</th>
 			<td>
-				<acme:print value="${totalNumberPatronagesOfStatus.value}"/>
+				<acme:print value="${countPatronages.value}"/>
 			</td>
 		</tr>
 	</jstl:forEach>
@@ -203,6 +236,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.average-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="averagePatronages" items="${ averageBudgetPatronagesOfStatus }">
 		<tr>
 			<th scope="row">
@@ -220,7 +256,10 @@
 	<acme:message code="administrator.admin-dashboard.form.deviation-patronages"/>
 </h3>
 
-<table class="table table-sm">	
+<table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.deviation-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="deviationPatronages" items="${ deviationBudgetPatronagesOfStatus }">
 		<tr>	
 			<th scope="row">
@@ -238,6 +277,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.minimum-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="minimumPatronages" items="${ minimumBudgetPatronagesOfStatus }">
 		<tr>
 			<th scope="row">
@@ -255,6 +297,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.admin-dashboard.form.maximum-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="maximumPatronages" items="${ maximumBudgetPatronagesOfStatus }">
 		<tr>
 			<th scope="row">
@@ -268,3 +313,5 @@
 </table>
 
 <acme:return/>
+
+

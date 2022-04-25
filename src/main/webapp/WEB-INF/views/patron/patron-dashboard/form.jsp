@@ -12,6 +12,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="patron.patron-dashboard.form.count-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="countPatronages" items="${ totalNumberPatronagesOfStatus }">
 		<tr>
 			<th scope="row">
@@ -30,6 +33,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="patron.patron-dashboard.form.average-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="averagePatronages" items="${ averageBudgetPatronagesOfStatusByCurrency }">
 		<tr>
 			<th scope="row">
@@ -48,6 +54,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="patron.patron-dashboard.form.deviation-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="deviationPatronages" items="${ deviationBudgetPatronagesOfStatusByCurrency }">
 		<tr>
 			<th scope="row">
@@ -66,6 +75,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="patron.patron-dashboard.form.minimum-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="minimumPatronages" items="${ minimumBudgetPatronagesOfStatusByCurrency }">
 		<tr>
 			<th scope="row">
@@ -84,6 +96,9 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>
+		<acme:message code="patron.patron-dashboard.form.maximum-patronages-caption"/>
+	</caption>
 	<jstl:forEach var="maximumPatronages" items="${ maximumBudgetPatronagesOfStatusByCurrency }">
 		<tr>
 			<th scope="row">
@@ -98,3 +113,4 @@
 </table>
 
 <acme:return/>
+

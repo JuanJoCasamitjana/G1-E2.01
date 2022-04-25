@@ -29,9 +29,13 @@ public class AuthenticatedAnnouncementListShowTest extends TestHarness {
 			super.clickOnListingRecord(recordIndex);
 			super.checkFormExists();
 			super.checkInputBoxHasValue("title", title);
-			super.checkInputBoxHasValue("criticality", criticality);
+			if(criticality.equals("false")) {
+				super.checkInputBoxHasValue("critical", "NOT CRITICAL");
+			} else {
+				super.checkInputBoxHasValue("critical", "CRITICAL");
+			}
 			super.checkInputBoxHasValue("body", body);
-			super.checkInputBoxHasValue("url", url);
+			super.checkInputBoxHasValue("optionalLink", url);
 
 			super.signOut();
 		}
