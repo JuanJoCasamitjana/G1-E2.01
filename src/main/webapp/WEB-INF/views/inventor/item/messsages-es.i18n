@@ -6,6 +6,7 @@ inventor.item.list.label.description = Descripción
 inventor.item.list.label.retailPrice = Precio Minorista
 inventor.item.list.label.optionalLink = Enlace Opcional
 inventor.item.list.label.published = Publicado
+inventor.item.list.button.create = Crear
 
 inventor.item.form.label.type = Tipo
 inventor.item.form.label.name = Nombre
@@ -15,3 +16,9 @@ inventor.item.form.label.description = Descripción
 inventor.item.form.label.retailPrice = Precio Minorista
 inventor.item.form.label.optionalLink = Enlace Opcional
 inventor.item.form.label.published = Publicado 
+inventor.item.form.button.update = Actualizar
+inventor.item.form.button.delete = Borrar
+inventor.item.form.button.publish = Publicar
+inventor.item.form.button.create = Crear
+
+inventor.item.form.error.duplicated = Este código no está libre

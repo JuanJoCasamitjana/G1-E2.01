@@ -6,6 +6,7 @@ inventor.item.list.label.description = Description
 inventor.item.list.label.retailPrice = Retail Price
 inventor.item.list.label.optionalLink = Optional Link
 inventor.item.list.label.published = Published
+inventor.item.list.button.create = Create
 
 inventor.item.form.label.type = Type
 inventor.item.form.label.name = Name
@@ -14,4 +15,10 @@ inventor.item.form.label.technology = Technology
 inventor.item.form.label.description = Description
 inventor.item.form.label.retailPrice = Retail Price
 inventor.item.form.label.optionalLink = Optional Link
-inventor.item.form.label.published = Published 
+inventor.item.form.label.published = Published
+inventor.item.form.button.update = Update
+inventor.item.form.button.delete = Delete
+inventor.item.form.button.publish = Publish
+inventor.item.form.button.create = Create
+
+inventor.item.form.error.duplicated = This code is taken
