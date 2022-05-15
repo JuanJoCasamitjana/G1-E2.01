@@ -1,0 +1,7 @@
+authenticated.announcement.form.label.title = Titulo
+authenticated.announcement.form.label.critical = Criticidad
+authenticated.announcement.form.label.body = Cuerpo
+authenticated.announcement.form.label.url = URL
+
+administrator.announcement.form.label.confirmation = Confirmar la creacion de este anuncio
+administrator.announcement.form.button.create = Crear
