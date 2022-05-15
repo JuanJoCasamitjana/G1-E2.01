@@ -16,6 +16,7 @@ public class InventorComponentListService implements AbstractListService<Invento
 
 	@Autowired
 	protected InventorItemRepository repository;
+	
 	@Override
 	public boolean authorise(final Request<Item> request) {
 		assert request != null;

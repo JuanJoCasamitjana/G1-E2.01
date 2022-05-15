@@ -10,3 +10,4 @@
 	<acme:list-column code="inventor.item.list.label.retailPrice" path="retailPrice" width="20%"/>
 	<acme:list-column code="inventor.item.list.label.published" path="published" width="20%"/>
 </acme:list>
+<acme:button code="inventor.item.list.button.create" action="/inventor/item/create"/>
