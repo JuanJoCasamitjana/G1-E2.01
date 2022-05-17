@@ -28,6 +28,7 @@
 	<acme:input-moment code="patron.patronage.form.label.startDate" path="startDate"/>
 	<acme:input-moment code="patron.patronage.form.label.finishDate" path="finishDate"/>
 	<acme:input-url code="patron.patronage.form.label.moreInfo" path="moreInfo"/>
+	<acme:input-checkbox code="patron.patronage.form.label.published" path="published"/>
 	
 	<acme:button code="patron.patronage.form.button.inventor" action="/any/user-account/show?id=${inventorId}"/>
 </acme:form>

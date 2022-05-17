@@ -6,6 +6,7 @@ patron.patronage.list.label.creationDate = Fecha de Creación
 patron.patronage.list.label.startDate = Fecha de Inicio
 patron.patronage.list.label.finishDate = Fecha de Fin
 patron.patronage.list.label.moreInfo = Más Información
+patron.patronage.list.label.published = Publicado
 
 patron.patronage.form.label.status = Estado
 patron.patronage.form.label.code = Código
@@ -15,5 +16,6 @@ patron.patronage.form.label.creationDate = Fecha de creación
 patron.patronage.form.label.startDate = Fecha de inicio
 patron.patronage.form.label.finishDate = Fecha de fin
 patron.patronage.form.label.moreInfo = Más información
+patron.patronage.form.label.published = Publicado
 
 patron.patronage.form.button.inventor = Inventor
