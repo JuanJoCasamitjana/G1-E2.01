@@ -1,0 +1,7 @@
+authenticated.announcement.form.label.title = Title
+authenticated.announcement.form.label.critical = Criticality
+authenticated.announcement.form.label.body = Body
+authenticated.announcement.form.label.url = URL
+
+administrator.announcement.form.label.confirmation = Confirm the creation of this announcement
+administrator.announcement.form.button.create = Create
