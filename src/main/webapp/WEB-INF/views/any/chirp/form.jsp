@@ -9,6 +9,7 @@
 	<acme:input-textbox code="any.chirp.form.label.creationMoment" path="creationMoment" readonly="true"/>
 	<acme:input-textbox code="any.chirp.form.label.author" path="author"/>
 	<acme:input-textbox code="any.chirp.form.label.email" path="email"/>
+	<acme:input-checkbox code="any.chirp.form.label.confirmation" path="confirmation"/>
 	
 	<jstl:choose>
 		<jstl:when test="${command == 'create'}">
