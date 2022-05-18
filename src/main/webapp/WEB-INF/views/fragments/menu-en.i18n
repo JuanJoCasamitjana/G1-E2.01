@@ -88,3 +88,7 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-patron = Become a Patron
+master.menu.user-account.patron = Patron Data
+master.menu.user-account.become-inventor = Become a Inventor
+master.menu.user-account.inventor = Inventor Data

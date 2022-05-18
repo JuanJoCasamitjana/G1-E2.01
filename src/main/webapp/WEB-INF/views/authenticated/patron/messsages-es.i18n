@@ -1,0 +1,6 @@
+authenticated.patron.patron.form.label.company = Compañía
+authenticated.patron.patron.form.label.statement = Declaración
+authenticated.patron.patron.form.label.info = Información
+
+authenticated.patron.patron.form.button.create = Registrar
+authenticated.patron.patron.form.button.update = Actualizar
