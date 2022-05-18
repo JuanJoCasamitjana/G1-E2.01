@@ -14,9 +14,12 @@ public class AdministratorSystemConfigrationController extends AbstractControlle
 
 	@Autowired
 	protected AdministratorSystemConfigrationShowService currenciesService;
+	@Autowired
+	protected AdministratorSystemConfigrationPerformService editService;
 	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("show", this.currenciesService);
+		super.addCommand("update", this.editService);
 	}
 }
