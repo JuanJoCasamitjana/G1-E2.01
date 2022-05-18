@@ -4,3 +4,5 @@ administrator.system-configuration.form.label.strong-spam-terms = Strong Spam Te
 administrator.system-configuration.form.label.strong-spam-threshold = Strong Spam Threshold
 administrator.system-configuration.form.label.weak-spam-terms = Weak Spam Terms
 administrator.system-configuration.form.label.weak-spam-threshold = Weak Spam Threshold
+administrator.system-configuration.submit.label.update = Update
+administrator.system-configuration.button.label.goToUpdate = Go to update

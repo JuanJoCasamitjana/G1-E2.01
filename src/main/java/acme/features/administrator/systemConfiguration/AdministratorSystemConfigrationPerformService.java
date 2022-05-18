@@ -52,7 +52,9 @@ public class AdministratorSystemConfigrationPerformService implements AbstractUp
 
 	@Override
 	public void validate(final Request<SystemConfiguration> request, final SystemConfiguration entity, final Errors errors) {
-		// TODO Auto-generated method stub
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
 		
 	}
 
