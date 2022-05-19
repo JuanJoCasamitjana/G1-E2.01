@@ -2,8 +2,12 @@ inventor.patronageReport.list.label.creationDate = Fecha de Creación
 inventor.patronageReport.list.label.memorandum = Memorandum
 inventor.patronageReport.list.label.optionalLink = Link Opcional
 inventor.patronageReport.list.label.serialCode = Código de Serie
+inventor.patronageReport.list.button.create = Crear
 
 inventor.patronageReport.form.label.creationDate = Fecha de Creación
 inventor.patronageReport.form.label.memorandum = Memorandum
 inventor.patronageReport.form.label.optionalLink = Link Opcional
 inventor.patronageReport.form.label.serialCode = Código de Serie
+inventor.patronageReport.form.label.patronage = Código del patrocinio
+inventor.patronageReport.form.label.confirmation = Confirmar la creación
+inventor.patronageReport.form.button.create = Crear

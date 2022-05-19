@@ -9,3 +9,5 @@
 	<acme:list-column code="inventor.patronageReport.list.label.serialCode" path="serialCode" width="25%"/>
 	<acme:list-column code="inventor.patronageReport.list.label.optionalLink" path="optionalLink" width="25%"/>
 </acme:list>
+
+<acme:button code="inventor.patronageReport.list.button.create" action="/inventor/patronage-report/create"/>
