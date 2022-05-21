@@ -44,7 +44,7 @@ public class PatronPatronageDeleteService implements AbstractDeleteService<Patro
 		assert entity != null;
 		assert errors != null;
 		
-		request.bind(entity, errors, "status", "code", "legalStuff", "budget", "startDate", "finishDate", "moreInfo", "published", "moreInfo");
+		request.bind(entity, errors, "status", "code", "legalStuff", "budget", "startDate", "finishDate", "published", "moreInfo");
 		entity.setInventor(this.repository.findInventorByInventorUsername(request.getModel().getAttribute("inventor").toString()));
 	}
 
