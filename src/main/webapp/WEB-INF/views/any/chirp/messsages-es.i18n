@@ -15,3 +15,5 @@ any.chirp.form.label.confirmation = Confirmar la creación
 any.chirp.form.button.create = Crear
 
 any.chirp.list.button.create = Crear
+
+any.chirp.form.create.error.spam = El ratio de terminos de spam debe ser bajo

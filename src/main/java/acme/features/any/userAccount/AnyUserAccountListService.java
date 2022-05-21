@@ -67,8 +67,12 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 		StringBuilder buffer;
 		Collection<UserRole> roles;
 
-		request.unbind(entity, model, "username", "identity.name", "identity.surname", "identity.email", "users-roles");
-
+		request.unbind(entity, model, "username");
+		
+		model.setAttribute("identity-surname", entity.getIdentity().getSurname());
+		model.setAttribute("identity-name", entity.getIdentity().getName());
+		
+		
 		roles = entity.getRoles();
 		buffer = new StringBuilder();
 		for (final UserRole role : roles) {
@@ -76,7 +80,7 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 			buffer.append(" ");
 		}
 
-		model.setAttribute("users-roles", buffer.toString());
+		model.setAttribute("user-roles", buffer.toString());
 	}
 
 }
