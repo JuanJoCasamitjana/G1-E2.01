@@ -7,6 +7,7 @@ import acme.entities.Item;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
 
@@ -70,6 +71,20 @@ public class InventorItemUpdateService implements AbstractUpdateService<Inventor
 			Item item;
 			item = this.repository.findItemByCode(entity.getCode());
 			errors.state(request, item == null || item.getCode().equals(entity.getCode()), "code", "inventor.item.form.error.duplicated");
+		}
+		if (!errors.hasErrors("retailPrice")) {
+			final Money budget = entity.getRetailPrice();
+			final Boolean isBudgetOverZero = budget.getAmount() > 0.;
+			final String[] splits = this.repository.findAcceptedCurrencies().split(",");
+			Boolean isCurrencyAccepted;
+			isCurrencyAccepted = false;
+			for (int i = 0; i < splits.length; i++) {
+				if (splits[i].equals(budget.getCurrency())) {
+					isCurrencyAccepted = true;
+				}
+			}
+			errors.state(request, isBudgetOverZero, "retailPrice", "inventor.item.form.error.retailPrice.amount");
+			errors.state(request, isCurrencyAccepted, "retailPrice", "inventor.item.form.error.retailPrice.currency");
 		}
 	}
 
