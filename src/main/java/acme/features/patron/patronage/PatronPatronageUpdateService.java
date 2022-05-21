@@ -7,10 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Patronage;
+import acme.entities.Status;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
+import acme.framework.controllers.HttpMethod;
 import acme.framework.controllers.Request;
+import acme.framework.controllers.Response;
 import acme.framework.datatypes.Money;
+import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Patron;
 
@@ -44,8 +48,8 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		assert entity != null;
 		assert errors != null;
 		
-//		entity.setInventor(this.repository.findInventorByInventorUsername(request.getModel().getAttribute("inventor").toString()));
 		request.bind(entity, errors, "status", "code", "legalStuff", "budget", "creationDate", "startDate", "finishDate", "published", "moreInfo");
+		entity.setInventor(this.repository.findInventorByInventorUsername(request.getModel().getAttribute("inventor").toString()));
 	}
 
 	@Override
@@ -55,7 +59,6 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		assert model != null;
 		
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget", "creationDate", "startDate", "finishDate", "published", "moreInfo");
-		model.setAttribute("readonly", false);
 		model.setAttribute("inventors", this.repository.findAllInventors());
 	}
 
@@ -81,26 +84,33 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		if (!errors.hasErrors("code")) {
 			Patronage pWithSameCode;
 			pWithSameCode = this.repository.findOnePatronageByCode(entity.getCode());
-			final Boolean sameCodeExists = pWithSameCode == null;
+			final Boolean sameCodeExists = pWithSameCode == null || pWithSameCode.getId() == entity.getId();
 			errors.state(request, sameCodeExists, "code", "patron.patronage.form.error.code");
 		}
 		if (!errors.hasErrors("budget")) {
 			final Money budget = entity.getBudget();
 			final Boolean isBudgetOverZero = budget.getAmount() > 0.;
-			final Boolean isCurrencyAccepted = this.repository.findAcceptedCurrencies().contains(budget.getCurrency());
+			final String[] splits = this.repository.findAcceptedCurrencies().split(",");
+			Boolean isCurrencyAccepted;
+			isCurrencyAccepted = false;
+			for (int i = 0; i < splits.length; i++) {
+				if (splits[i].equals(budget.getCurrency())) {
+					isCurrencyAccepted = true;
+				}
+			}
 			errors.state(request, isBudgetOverZero, "budget", "patron.patronage.form.error.budget.amount");
 			errors.state(request, isCurrencyAccepted, "budget", "patron.patronage.form.error.budget.currency");
 		}
 		if (!errors.hasErrors("startDate")) {
 			Date minimumStartDate;
 			minimumStartDate = DateUtils.addMonths(entity.getCreationDate(), 1);
-			final Boolean isStartDateAfterMinimum = entity.getCreationDate().after(minimumStartDate);
+			final Boolean isStartDateAfterMinimum = entity.getStartDate().after(DateUtils.addMinutes(minimumStartDate, -1));
 			errors.state(request, isStartDateAfterMinimum, "startDate", "patron.patronage.form.error.startDate");
 		}
 		if (!errors.hasErrors("finishDate")) {
 			Date minimumFinishDate;
 			minimumFinishDate = DateUtils.addMonths(entity.getStartDate(), 1);
-			final Boolean isFinishDateAfterMinimum = entity.getStartDate().after(minimumFinishDate);
+			final Boolean isFinishDateAfterMinimum = entity.getFinishDate().after(DateUtils.addMinutes(minimumFinishDate, -1));
 			errors.state(request, isFinishDateAfterMinimum, "finishDate", "patron.patronage.form.error.finishDate");
 		}
 		
@@ -111,7 +121,18 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		assert request != null;
 		assert entity != null;
 		
+		entity.setStatus(Status.PROPOSED);
 		this.repository.save(entity);
 	}
+	
+	@Override
+	public void onSuccess(final Request<Patronage> request, final Response<Patronage> response) {
+		assert request != null;
+		assert response != null;
 
+		if (request.isMethod(HttpMethod.POST)) {
+			PrincipalHelper.handleUpdate();
+		}
+	}
+	
 }

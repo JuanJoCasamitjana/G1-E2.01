@@ -8,6 +8,8 @@ patron.patronage.list.label.finishDate = Finish Date
 patron.patronage.list.label.moreInfo = More Information
 patron.patronage.list.label.published = Published
 
+patron.patronage.list.button.create = Create patronage
+
 patron.patronage.form.label.status = Status
 patron.patronage.form.label.code = Code
 patron.patronage.form.label.legalStuff = Legal Terms
@@ -17,5 +19,16 @@ patron.patronage.form.label.startDate = Start Date
 patron.patronage.form.label.finishDate = Finish Date
 patron.patronage.form.label.moreInfo = More Information
 patron.patronage.form.label.published = Published
+patron.patronage.form.label.inventor = Choose Inventor
+patron.patronage.form.button.update = Update
+patron.patronage.form.button.delete = Delete
+patron.patronage.form.button.publish = Publish
+patron.patronage.form.button.create = Create
+
+patron.patronage.form.error.code = There is another patronage with the same code. Choose another code.
+patron.patronage.form.error.budget.amount = The budget of the patronage must be higher than zero.
+patron.patronage.form.error.budget.currency = The specified currency is not accepted.
+patron.patronage.form.error.startDate = The start date of the patronage must be at least one month after it's creation.
+patron.patronage.form.error.finishDate = The duration of the patronage must be of one month at least.
 
 patron.patronage.form.button.inventor = Inventor

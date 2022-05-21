@@ -8,6 +8,8 @@ patron.patronage.list.label.finishDate = Fecha de Fin
 patron.patronage.list.label.moreInfo = Más Información
 patron.patronage.list.label.published = Publicado
 
+patron.patronage.list.button.create = Crear patrocinio
+
 patron.patronage.form.label.status = Estado
 patron.patronage.form.label.code = Código
 patron.patronage.form.label.legalStuff = Términos legales
@@ -17,5 +19,16 @@ patron.patronage.form.label.startDate = Fecha de inicio
 patron.patronage.form.label.finishDate = Fecha de fin
 patron.patronage.form.label.moreInfo = Más información
 patron.patronage.form.label.published = Publicado
+patron.patronage.form.label.inventor = Elige Inventor
+patron.patronage.form.button.update = Actualizar
+patron.patronage.form.button.delete = Eliminar
+patron.patronage.form.button.publish = Publicar
+patron.patronage.form.button.create = Crear
+
+patron.patronage.form.error.code = Existe otro patrocinio con el mismo codigo. Elige otro codigo.
+patron.patronage.form.error.budget.amount = La cantidad del presupuesto debe ser mayor a cero.
+patron.patronage.form.error.budget.currency = La divisa especificada no esta aceptada.
+patron.patronage.form.error.startDate = La fecha de inicio del patrocinio debe ser al menos un mes despues de su creacion.
+patron.patronage.form.error.finishDate = La duracion del patrocinio debe ser de un mes al menos.
 
 patron.patronage.form.button.inventor = Inventor
