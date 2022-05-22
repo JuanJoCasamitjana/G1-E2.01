@@ -13,13 +13,11 @@ import acme.system.configuration.SystemConfiguration;
 public class AdministratorSystemConfigrationController extends AbstractController<Administrator, SystemConfiguration> {
 
 	@Autowired
-	protected AdministratorSystemConfigrationShowService currenciesService;
-	@Autowired
 	protected AdministratorSystemConfigrationPerformService editService;
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("show", this.currenciesService);
+		
 		super.addCommand("update", this.editService);
 	}
 }

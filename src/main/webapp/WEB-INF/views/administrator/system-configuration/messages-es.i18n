@@ -5,4 +5,3 @@ administrator.system-configuration.form.label.strong-spam-threshold = Umbral de 
 administrator.system-configuration.form.label.weak-spam-terms = Terminos de Spam Debiles
 administrator.system-configuration.form.label.weak-spam-threshold = Umbral de Spam Debil
 administrator.system-configuration.submit.label.update = Actualizar
-administrator.system-configuration.button.label.goToUpdate = Ir a actualizar

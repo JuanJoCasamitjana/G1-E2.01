@@ -11,11 +11,5 @@
 	<acme:input-textbox code="administrator.system-configuration.form.label.strong-spam-threshold" path="strongSpamThreshold" readonly="${readOnly}"/>
 	<acme:input-textbox code="administrator.system-configuration.form.label.weak-spam-terms" path="weakSpamTerms" readonly="${readOnly}"/>
 	<acme:input-textbox code="administrator.system-configuration.form.label.weak-spam-threshold" path="weakSpamThreshold" readonly="${readOnly}"/>
-	<jstl:if test="${command=='update'}">
-		<acme:submit code="administrator.system-configuration.submit.label.update" action="/administrator/system-configuration/update"/>
-	</jstl:if>
+	<acme:submit code="administrator.system-configuration.submit.label.update" action="/administrator/system-configuration/update"/>
 </acme:form>
-
-<jstl:if test="${command=='show'}">
-	<acme:button code="administrator.system-configuration.button.label.goToUpdate" action="/administrator/system-configuration/update"/>
-</jstl:if>
