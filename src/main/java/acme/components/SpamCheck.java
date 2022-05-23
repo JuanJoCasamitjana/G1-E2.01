@@ -16,20 +16,17 @@ public class SpamCheck {
 		SpamCheck.repository = repository;
 	}
 	
-	public static Boolean underSpamThreshold(final String text) {
-		SpamDetector strongDetect, weakDetect;
-		String strongTerms, weakTerms;
-		Double strongThreshold, weakThreshold;
+	public static Boolean overStrongSpamThreshold(final String text) {
+		SpamDetector detect;
+		String terms;
+		Double threshold;
 		
-		strongTerms = SpamCheck.repository.getStrongSpamTerms();
-		weakTerms = SpamCheck.repository.getWeakSpamTerms();
-		strongThreshold = SpamCheck.repository.getStrongSpamThreshold();
-		weakThreshold = SpamCheck.repository.getWeakSpamThreshold();
+		terms = SpamCheck.repository.getStrongSpamTerms();
+		threshold = SpamCheck.repository.getStrongSpamThreshold();
 		
-		strongDetect = SpamDetector.of(strongTerms, strongThreshold);
-		weakDetect = SpamDetector.of(weakTerms, weakThreshold);
+		detect = SpamDetector.of(terms, threshold);
 		
 		
-		return !(strongDetect.check(text) || weakDetect.check(text));
+		return detect.check(text);
 	}
 }
