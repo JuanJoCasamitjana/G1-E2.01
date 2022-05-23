@@ -18,4 +18,5 @@ inventor.patronage.form.label.finishDate = Finish Date
 inventor.patronage.form.label.moreInfo = More Information
 inventor.patronage.form.label.published = Published
 
+inventor.patronage.form.button.update = Update
 inventor.patronage.form.button.patron = Patron
