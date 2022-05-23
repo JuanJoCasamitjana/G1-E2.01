@@ -1,0 +1,10 @@
+recordIndex,status,code,legalStuff,budget,startDate,finishDate,moreInfo,published
+0,PROPOSED,ZZZ,Estado legal,EUR 22.50,2023/05/22 13:14,2023/06/22 13:25,,false
+1,PROPOSED,ACZ-019-A,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,EUR 22.50,2023/05/22 13:14,2023/06/22 13:25,,false
+2,PROPOSED,ACZ-019-A,Estado legal,EUR 0,2023/05/22 13:14,2023/06/22 13:25,,false
+3,PROPOSED,ACZ-019-A,Estado legal,EUR -22.50,2023/05/22 13:14,2023/06/22 13:25,,false
+4,PROPOSED,ACZ-019-A,Estado legal,BBB 22.50,2023/05/22 13:14,2023/06/22 13:25,,false
+5,PROPOSED,ACZ-019-A,Estado legal,EUR 22.50,2021/04/22 13:14,2023/06/22 13:25,,false
+6,PROPOSED,ACZ-019-A,Estado legal,EUR 22.50,2022/05/22 13:14,2022/056/22 13:25,,false
+7,PROPOSED,ACZ-019-A,Estado legal,EUR 22.50,2023/05/22 13:14,2023/06/22 13:25,link pocho,false
+8,PROPOSED,,,,,,,
