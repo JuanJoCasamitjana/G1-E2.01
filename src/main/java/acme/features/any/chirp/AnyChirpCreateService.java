@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamCheck;
 import acme.entities.Chirp;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -72,13 +73,16 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp>{
 		assert errors != null;
 		
 		final boolean confirmation = request.getModel().getBoolean("confirmation");
-		
-//		final boolean bodyHasTooMuchSpam = SpamCheck.overSpamThreshold(entity.getBody());
-//		final boolean titleHasTooMuchSpam = SpamCheck.overSpamThreshold(entity.getTitle());
-		
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
-//		errors.state(request, !bodyHasTooMuchSpam, "body", "any.chirp.form.create.error.spam");
-//		errors.state(request, !titleHasTooMuchSpam, "title", "any.chirp.form.create.error.spam");
+		
+		boolean bodyWithinThreshold, titleWithinThreshold;
+		
+		bodyWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getBody());
+		titleWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getTitle());
+		
+		errors.state(request, !bodyWithinThreshold, "body", "any.chirp.form.error.spam");
+		errors.state(request, !titleWithinThreshold, "title", "any.chirp.form.error.spam");
+		
 	}
 
 	@Override

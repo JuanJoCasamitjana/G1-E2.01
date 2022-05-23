@@ -5,6 +5,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamCheck;
 import acme.entities.Announcement;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -75,14 +76,15 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		assert errors != null;
 		
 		final boolean confirmation = request.getModel().getBoolean("confirmation");
-		
-//		final boolean bodyHasTooMuchSpam = SpamCheck.overSpamThreshold(entity.getBody());
-//		final boolean titleHasTooMuchSpam = SpamCheck.overSpamThreshold(entity.getTitle());
-		
-		
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
-//		errors.state(request, !bodyHasTooMuchSpam, "body", "administrator.announcement.form.error.spam");
-//		errors.state(request, !titleHasTooMuchSpam, "title", "administrator.announcement.form.error.spam");
+		
+		boolean bodyWithinThreshold, titleWithinThreshold;
+		
+		bodyWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getBody());
+		titleWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getTitle());
+		
+		errors.state(request, !bodyWithinThreshold, "body", "administrator.announcement.form.error.spam");
+		errors.state(request, !titleWithinThreshold, "title", "administrator.announcement.form.error.spam");
 		
 	}
 

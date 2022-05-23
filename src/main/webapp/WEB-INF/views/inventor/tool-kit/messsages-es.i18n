@@ -2,8 +2,8 @@ inventor.toolKit.list.label.code = Código
 inventor.toolKit.list.label.title = Título
 inventor.toolKit.list.label.published = Publicado
 
-inventor.toolKit.form.label.code = Codigo
-inventor.toolKit.form.label.title = Titulo
+inventor.toolKit.form.label.code = Código
+inventor.toolKit.form.label.title = Título
 inventor.toolKit.form.label.description = Descripción
 inventor.toolKit.form.label.assemblyNotes = Notas de ensamblaje
 inventor.toolKit.form.label.optionalLink = Enlace
@@ -17,5 +17,6 @@ inventor.toolKit.form.button.create = Crear
 
 inventor.toolKit.form.button.edit-items = Editar las herramientas y componentes de este tool kit
 
-inventor.tool-kit.form.error.duplicated = Ya existe un tool kit con este codigo
+inventor.tool-kit.form.error.duplicated = Ya existe un tool kit con este código
 inventor.tool-kit.publish.form.error.no-items = No se puede publicar un tool kit sin herramientas ni componentes
+inventor.tool-kit.form.error.spam = El ratio de términos de spam debe ser bajo
