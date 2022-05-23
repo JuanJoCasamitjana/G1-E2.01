@@ -55,6 +55,17 @@ public class AdministratorSystemConfigrationPerformService implements AbstractUp
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		String[] currencies;
+		int k =0;
+		if(!errors.hasErrors("defaultSystemCurrency")) {
+			if(entity.getAcceptedCurrencies()!=null) {
+				currencies = entity.getAcceptedCurrencies().split(",");
+				for(final String currency:currencies) {
+					if(entity.getDefaultSystemCurrency().equals(currency)) ++k;
+				}
+				errors.state(request, k>0, "defaultSystemCurrency", "administrator.system-configuration.form.error.not-default-currency");
+			}
+		}
 		
 	}
 
