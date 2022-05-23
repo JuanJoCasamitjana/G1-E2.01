@@ -67,7 +67,7 @@ public class InventorToolKitCreateService implements AbstractCreateService<Inven
 		if(!errors.hasErrors("code")) {
 			ToolKit toolKit;
 			toolKit = this.repository.findToolKitByCode(entity.getCode());
-			errors.state(request, toolKit == null || toolKit.getCode() == entity.getCode(), "code", "inventor.tool-kit.form.error.duplicated");
+			errors.state(request, toolKit == null || toolKit.getCode().equals(entity.getCode()), "code", "inventor.tool-kit.form.error.duplicated");
 			
 			boolean descriptionWithinThreshold, titleWithinThreshold, assemblyNotesWithinThreshold;
 			

@@ -64,7 +64,7 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 		if(!errors.hasErrors("code")) {
 			Item item;
 			item = this.repository.findItemByCode(entity.getCode());
-			errors.state(request, item == null || item.getCode() == entity.getCode(), "code", "inventor.item.form.error.duplicated");
+			errors.state(request, item == null || item.getCode().equals(entity.getCode()), "code", "inventor.item.form.error.duplicated");
 			
 			
 			boolean descriptionWithinThreshold, nameWithinThreshold, technologyWithinThreshold;

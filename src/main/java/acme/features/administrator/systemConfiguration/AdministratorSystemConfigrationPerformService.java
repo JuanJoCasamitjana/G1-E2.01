@@ -1,3 +1,4 @@
+
 package acme.features.administrator.systemConfiguration;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +13,15 @@ import acme.system.configuration.SystemConfiguration;
 
 @Service
 public class AdministratorSystemConfigrationPerformService implements AbstractUpdateService<Administrator, SystemConfiguration> {
+
 	@Autowired
 	protected AdministratorSystemConfigrationRepository repository;
+
 
 	@Override
 	public boolean authorise(final Request<SystemConfiguration> request) {
 		assert request != null;
-		
+
 		return true;
 	}
 
@@ -27,9 +30,9 @@ public class AdministratorSystemConfigrationPerformService implements AbstractUp
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		request.bind(entity, errors, "acceptedCurrencies","defaultSystemCurrency", "strongSpamTerms", "strongSpamThreshold", "weakSpamTerms", "weakSpamThreshold");
-		
+
+		request.bind(entity, errors, "acceptedCurrencies", "defaultSystemCurrency", "strongSpamTerms", "strongSpamThreshold", "weakSpamTerms", "weakSpamThreshold");
+
 	}
 
 	@Override
@@ -37,8 +40,8 @@ public class AdministratorSystemConfigrationPerformService implements AbstractUp
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		request.unbind(entity, model, "acceptedCurrencies","defaultSystemCurrency", "strongSpamTerms", "strongSpamThreshold", "weakSpamTerms", "weakSpamThreshold");
+
+		request.unbind(entity, model, "acceptedCurrencies", "defaultSystemCurrency", "strongSpamTerms", "strongSpamThreshold", "weakSpamTerms", "weakSpamThreshold");
 		model.setAttribute("readOnly", false);
 	}
 
@@ -46,7 +49,7 @@ public class AdministratorSystemConfigrationPerformService implements AbstractUp
 	public SystemConfiguration findOne(final Request<SystemConfiguration> request) {
 		SystemConfiguration sysConf;
 		sysConf = this.repository.getSystemConfiguration();
-		
+
 		return sysConf;
 	}
 
@@ -56,26 +59,25 @@ public class AdministratorSystemConfigrationPerformService implements AbstractUp
 		assert entity != null;
 		assert errors != null;
 		String[] currencies;
-		int k =0;
-		if(!errors.hasErrors("defaultSystemCurrency")) {
-			if(entity.getAcceptedCurrencies()!=null) {
-				currencies = entity.getAcceptedCurrencies().split(",");
-				for(final String currency:currencies) {
-					if(entity.getDefaultSystemCurrency().equals(currency)) ++k;
-				}
-				errors.state(request, k>0, "defaultSystemCurrency", "administrator.system-configuration.form.error.not-default-currency");
+		int k = 0;
+		if (!errors.hasErrors("defaultSystemCurrency") && entity.getAcceptedCurrencies() != null) {
+			currencies = entity.getAcceptedCurrencies().split(",");
+			for (final String currency : currencies) {
+				if (entity.getDefaultSystemCurrency().equals(currency))
+					++k;
 			}
+			errors.state(request, k > 0, "defaultSystemCurrency", "administrator.system-configuration.form.error.not-default-currency");
 		}
-		
+
 	}
 
 	@Override
 	public void update(final Request<SystemConfiguration> request, final SystemConfiguration entity) {
 		assert request != null;
 		assert entity != null;
-		
+
 		this.repository.save(entity);
-		
+
 	}
 
 }
