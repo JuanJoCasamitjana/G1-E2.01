@@ -1,6 +1,7 @@
 package acme.testing.authenticated.patron;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -24,6 +25,7 @@ public class AuthenticatedPatronCreateTest extends TestHarness {
 			super.checkFormExists();
 			super.fillInputBoxIn("company", company);
 			super.fillInputBoxIn("statement", statement);
+			super.fillInputBoxIn("info", info);
 			super.clickOnSubmit("Register");
 
 			super.signOut();
@@ -34,17 +36,31 @@ public class AuthenticatedPatronCreateTest extends TestHarness {
 		@Order(10)
 		public void negativeTest(final int recordIndex, final String company, final String statement, final String info) {
 			
-			super.signUp("test2", "test2", "test2", "test2", "test2@gmail.com");
-			super.signIn("test2", "test2");
+			super.signIn("inventor1", "inventor1");
 			
 			super.clickOnMenu("Account", "Become a Patron");
 			super.checkFormExists();
 			super.fillInputBoxIn("company", company);
 			super.fillInputBoxIn("statement", statement);
+			super.fillInputBoxIn("info", info);
 			super.clickOnSubmit("Register");
 			
 			super.checkErrorsExist();
 			super.signOut();
 		}
 	
+		@Test
+		@Order(10)
+		public void hackingTest() {
+			
+			super.checkNotLinkExists("Account");
+			super.navigate("/authenticated/patron/update");
+			super.checkPanicExists();
+			
+			super.signIn("patron1", "patron1");
+			super.navigate("/authenticated/patron/create");
+			super.checkPanicExists();
+			super.signOut();
+		}
+		
 }
