@@ -19,7 +19,7 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 		super.clickOnMenu("Patrons", "My patronages");
 		super.clickOnButton("Create patronage");
 		
-		super.fillInputBoxIn("code", "PAT-001-A");
+		super.fillInputBoxIn("code", "AAA-000-A");
 		super.fillInputBoxIn("legalStuff", "The legal stuff is here");
 		super.fillInputBoxIn("budget", "EUR 1,099.99");
 		super.fillInputBoxIn("startDate", "2023/02/20 09:00");
@@ -55,7 +55,7 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 		
 		super.fillInputBoxIn("memorandum", memorandum);
 		super.fillInputBoxIn("optionalLink", optionalLink);
-		super.fillInputBoxIn("patronage", "PAT-001-A");
+		super.fillInputBoxIn("patronage", "AAA-000-A");
 		super.fillInputBoxIn("confirmation", "true");
 		
 		super.clickOnSubmit("Create");
@@ -67,7 +67,7 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 		super.checkFormExists();
 		super.checkInputBoxHasValue("memorandum", memorandum);
 		super.checkInputBoxHasValue("optionalLink", optionalLink);
-		super.checkInputBoxHasValue("patronage", "PAT-001-A");
+		super.checkInputBoxHasValue("patronage", "AAA-000-A");
 		
 		super.signOut();
 	}
@@ -86,7 +86,7 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 		
 		super.fillInputBoxIn("memorandum", memorandum);
 		super.fillInputBoxIn("optionalLink", optionalLink);
-		super.fillInputBoxIn("patronage", "PAT-001-A");
+		super.fillInputBoxIn("patronage", "AAA-000-A");
 		super.fillInputBoxIn("confirmation", confirmation);
 		
 		super.clickOnSubmit("Create");
