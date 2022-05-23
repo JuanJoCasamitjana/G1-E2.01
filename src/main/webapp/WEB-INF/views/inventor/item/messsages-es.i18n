@@ -10,11 +10,11 @@ inventor.item.list.button.create = Crear
 
 inventor.item.form.label.type = Tipo
 inventor.item.form.label.name = Nombre
-inventor.item.form.label.code = Tecnología
-inventor.item.form.label.technology = Presupuesto
+inventor.item.form.label.code = Código
+inventor.item.form.label.technology = Tecnología
 inventor.item.form.label.description = Descripción
-inventor.item.form.label.retailPrice = Precio Minorista
-inventor.item.form.label.optionalLink = Enlace Opcional
+inventor.item.form.label.retailPrice = Precio
+inventor.item.form.label.optionalLink = Enlace
 inventor.item.form.label.published = Publicado 
 inventor.item.form.button.update = Actualizar
 inventor.item.form.button.delete = Borrar

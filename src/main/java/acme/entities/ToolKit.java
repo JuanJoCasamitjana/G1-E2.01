@@ -52,6 +52,7 @@ public class ToolKit extends AbstractEntity{
 	@NotNull
 	protected boolean published;
 	
+	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	protected Inventor inventor;

@@ -1,5 +1,6 @@
 inventor.toolKit.list.label.code = Code
 inventor.toolKit.list.label.title = Title
+inventor.toolKit.list.label.published = Published
 
 inventor.toolKit.form.label.code = Code
 inventor.toolKit.form.label.title = Title
@@ -7,5 +8,14 @@ inventor.toolKit.form.label.description = Description
 inventor.toolKit.form.label.assemblyNotes = Assembly Notes
 inventor.toolKit.form.label.optionalLink = Link
 
-inventor.toolKit.form.button.tools = My tools
-inventor.toolKit.form.button.components = My components
+inventor.toolKit.list.label.create = Make a new tool kit
+
+inventor.toolKit.form.button.update = Update
+inventor.toolKit.form.button.delete = Delete
+inventor.toolKit.form.button.publish = Publish
+inventor.toolKit.form.button.create = Create
+
+inventor.toolKit.form.button.edit-items = Edit the tools and components in this tool kit
+
+inventor.tool-kit.form.error.duplicated = There is an existing tool kit with this code
+inventor.tool-kit.publish.form.error.no-items = You cannot publish a tool kit without tools or components
