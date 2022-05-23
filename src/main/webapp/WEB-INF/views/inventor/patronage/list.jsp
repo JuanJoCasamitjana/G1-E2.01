@@ -12,4 +12,5 @@
 	<acme:list-column code="inventor.patronage.list.label.startDate" path="startDate" width="10%"/>
 	<acme:list-column code="inventor.patronage.list.label.finishDate" path="finishDate" width="10%"/>
 	<acme:list-column code="inventor.patronage.list.label.moreInfo" path="moreInfo" width="10%"/>
+		<acme:list-column code="inventor.patronage.list.label.published" path="published" width="10%"/>
 </acme:list>

@@ -374,6 +374,7 @@ Patronage
 + creationDate: Date {NotNull, Past, Temporal(TIMESTAMP)}
 + startDate: Date {NotNull, Temporal(TIMESTAMP)}
 + finishDate: Date {NotNull, Temporal(TIMESTAMP)}
++ published: boolean
 + optionalLink: String {URL}
 bg=green</panel_attributes>
     <additional_attributes/>

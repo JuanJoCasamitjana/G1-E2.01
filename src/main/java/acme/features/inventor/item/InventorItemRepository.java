@@ -24,4 +24,7 @@ public interface InventorItemRepository extends AbstractRepository{
 	@Query("select i from Inventor i where i.id = :id")
 	Inventor findInventorById(int id);
 
+	@Query("select sc.acceptedCurrencies from SystemConfiguration sc")
+	String findAcceptedCurrencies();
+	
 }
