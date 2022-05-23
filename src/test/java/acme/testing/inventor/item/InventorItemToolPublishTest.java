@@ -1,6 +1,7 @@
 package acme.testing.inventor.item;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -22,7 +23,6 @@ public class InventorItemToolPublishTest extends TestHarness {
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.fillInputBoxIn("name", name);
 		super.clickOnSubmit("Publish");
 		
 		super.checkListingExists();
@@ -31,4 +31,22 @@ public class InventorItemToolPublishTest extends TestHarness {
 		
 	}
 	
+	@Test
+	@Order(10)
+	public void hackingTest() {
+		
+		super.checkNotLinkExists("Account");
+		super.navigate("/inventor/item/publish");
+		super.checkPanicExists();
+
+		super.signIn("administrator", "administrator");
+		super.navigate("/inventor/item/publish");
+		super.checkPanicExists();
+		super.signOut();
+		
+		super.signIn("patron1", "patron1");
+		super.navigate("/inventor/item/publish");
+		super.checkPanicExists();
+		super.signOut();
+	}
 }

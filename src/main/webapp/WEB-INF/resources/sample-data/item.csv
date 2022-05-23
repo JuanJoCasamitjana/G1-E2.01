@@ -9,3 +9,4 @@ item-07,inventor-03,"COMPONENT","Nail","COM-123-B","placeholder technology","A 5
 item-08,inventor-04,"COMPONENT","Clip","COM-123-C","placeholder technology","A paper clip","EUR 0.05",null,False
 item-09,inventor-01,"COMPONENT","Staple","COM-123-D","placeholder technology","An office staple","EUR 0.01",null,False
 item-10,inventor-02,"COMPONENT","Board","COM-123-E","placeholder technology","A 5m x 5m wooden board","EUR 50.00",null,False
+item-11,inventor-01,"TOOL","a Ruler","TOL-123-R","placeholder technology","a ruler","EUR 2.99",null,false
