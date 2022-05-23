@@ -50,7 +50,6 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		Date creationDate;
 		creationDate = new Date(System.currentTimeMillis()-1);
 		entity.setCreationDate(creationDate);
-		entity.setStatus(Status.PROPOSED);
 		entity.setPublished(false);
 		
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget", "creationDate", "startDate", "finishDate", "published", "moreInfo");
