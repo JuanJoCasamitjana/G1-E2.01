@@ -1,11 +1,21 @@
-inventor.toolKit.list.label.code = Codigo
-inventor.toolKit.list.label.title = Titulo
+inventor.toolKit.list.label.code = Código
+inventor.toolKit.list.label.title = Título
+inventor.toolKit.list.label.published = Publicado
 
 inventor.toolKit.form.label.code = Codigo
 inventor.toolKit.form.label.title = Titulo
-inventor.toolKit.form.label.description = Descripcion
-inventor.toolKit.form.label.assemblyNotes = Notas de Montaje
-inventor.toolKit.form.label.optionalLink = Link
+inventor.toolKit.form.label.description = Descripción
+inventor.toolKit.form.label.assemblyNotes = Notas de ensamblaje
+inventor.toolKit.form.label.optionalLink = Enlace
 
-inventor.toolKit.form.button.tools = Mis herramientas
-inventor.toolKit.form.button.components = Mis componentes
+inventor.toolKit.list.label.create = Crear tool kit
+
+inventor.toolKit.form.button.update = Actualizar
+inventor.toolKit.form.button.delete = Eliminar
+inventor.toolKit.form.button.publish = Publicar
+inventor.toolKit.form.button.create = Crear
+
+inventor.toolKit.form.button.edit-items = Editar las herramientas y componentes de este tool kit
+
+inventor.tool-kit.form.error.duplicated = Ya existe un tool kit con este codigo
+inventor.tool-kit.publish.form.error.no-items = No se puede publicar un tool kit sin herramientas ni componentes

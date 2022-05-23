@@ -25,11 +25,14 @@ public class InventorToolKitShowService implements AbstractShowService<Inventor,
 		
 		boolean result = false;
 		
-		final int inventorId = request.getPrincipal().getActiveRoleId();
-		final int id = request.getModel().getInteger("id");
-		final ToolKit tk = this.repository.findOneToolkitById(id);
+		ToolKit tk;
+		int inventorId, id;
 		
-		if (tk.getInventor().getId() == inventorId) {
+		id = request.getModel().getInteger("id");
+		tk = this.repository.findOneToolkitById(id);
+		inventorId = request.getPrincipal().getActiveRoleId();
+		
+		if (tk!=null && tk.getInventor().getId() == inventorId) {
 			result = true;
 		}
 		
@@ -52,7 +55,7 @@ public class InventorToolKitShowService implements AbstractShowService<Inventor,
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "optionalLink");
+		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "optionalLink", "published");
 	}
 	
 }
