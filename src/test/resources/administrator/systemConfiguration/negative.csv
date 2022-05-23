@@ -1,0 +1,8 @@
+recordIndex,acceptedCurrencies,defaultSystemCurrency,strongSpamTerms,strongSpamThreshold,weakSpamTerms,weakSpamThreshold
+1,"","USD","sex,hard core,puta,viagra,cialis,sexo,duro,s3xo",0.2,"horny,sexy,nigeria,you've won,one million,sexi,has ganado,un millón",0.30
+2,"EUR,USD,GBP","","sex,hard core,puta,viagra,cialis,sexo,duro,s3xo",0.2,"horny,sexy,nigeria,you've won,one million,sexi,has ganado,un millón",0.30
+3,"EUR,USD,GBP","EUR","",0.2,"horny,sexy,nigeria,you've won,one million,sexi,has ganado,un millón",0.30
+4,"EUR,USD,GBP","EUR","sex,hard core,puta,viagra,cialis,sexo,duro,s3xo",0.2,"",0.30
+5,"EUR,USD,GBP","ASD","sex,hard core,puta,viagra,cialis,sexo,duro,s3xo",0.2,"horny,sexy,nigeria,you've won,one million,sexi,has ganado,un millón",0.30
+6,"EUR,USD,GBP","EUR","sex,hard core,puta,viagra,cialis,sexo,duro,s3xo",1.2,"horny,sexy,nigeria,you've won,one million,sexi,has ganado,un millón",0.30
+7,"EUR,USD,GBP","EUR","sex,hard core,puta,viagra,cialis,sexo,duro,s3xo",0.2,"horny,sexy,nigeria,you've won,one million,sexi,has ganado,un millón",1.30

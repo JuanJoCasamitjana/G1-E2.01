@@ -22,3 +22,6 @@ inventor.item.form.button.publish = Publicar
 inventor.item.form.button.create = Crear
 
 inventor.item.form.error.duplicated = Este código no está libre
+inventor.item.form.error.retailPrice.amount = El precio debe ser mayor de 0
+inventor.item.form.error.retailPrice.currency = La divisa especificada no es válida
+inventor.item.form.error.spam = El ratio de términos de spam debe ser bajo

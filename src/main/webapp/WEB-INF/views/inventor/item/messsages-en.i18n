@@ -22,3 +22,6 @@ inventor.item.form.button.publish = Publish
 inventor.item.form.button.create = Create
 
 inventor.item.form.error.duplicated = This code is taken
+inventor.item.form.error.retailPrice.amount = Retail Price must be higher than 0
+inventor.item.form.error.retailPrice.currency = The specified currency is not accepted
+inventor.item.form.error.spam = The ratio of spam terms should be low

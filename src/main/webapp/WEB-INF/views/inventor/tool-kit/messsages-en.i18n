@@ -20,3 +20,4 @@ inventor.toolKit.form.button.edit-items = Edit the tools and components in this 
 
 inventor.tool-kit.form.error.duplicated = There is an existing tool kit with this code
 inventor.tool-kit.publish.form.error.no-items = You cannot publish a tool kit without tools or components
+inventor.tool-kit.form.error.spam = The ratio of spam terms should be low

@@ -1,5 +1,5 @@
 key,key:patronage,creation_date,serial_code,memorandum
 patronage-report-01,patronage-01,"2020/01/02 10:00","PTR-123-A:0001","Placeholder memorandum"
-patronage-report-02,patronage-02,"2020/01/02 10:00","PTR-123-B:0001","Placeholder memorandum"
-patronage-report-03,patronage-03,"2020/01/02 10:00","PTR-123-C:0001","Placeholder memorandum"
-patronage-report-04,patronage-04,"2020/01/02 10:00","PTR-123-D:0001","Placeholder memorandum"
+patronage-report-02,patronage-02,"2020/01/02 10:00","PTR-123-B:0002","Placeholder memorandum"
+patronage-report-03,patronage-03,"2020/01/02 10:00","PTR-123-C:0003","Placeholder memorandum"
+patronage-report-04,patronage-04,"2020/01/02 10:00","PTR-123-D:0004","Placeholder memorandum"

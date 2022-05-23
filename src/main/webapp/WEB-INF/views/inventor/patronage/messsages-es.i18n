@@ -6,6 +6,7 @@ inventor.patronage.list.label.creationDate = Fecha de Creación
 inventor.patronage.list.label.startDate = Fecha de Inicio
 inventor.patronage.list.label.finishDate = Fecha de Fin
 inventor.patronage.list.label.moreInfo = Más Información
+inventor.patronage.list.label.published = Publicado
 
 inventor.patronage.form.label.status = Estado
 inventor.patronage.form.label.code = Código
@@ -15,5 +16,7 @@ inventor.patronage.form.label.creationDate = Fecha de creación
 inventor.patronage.form.label.startDate = Fecha de inicio
 inventor.patronage.form.label.finishDate = Fecha de fin
 inventor.patronage.form.label.moreInfo = Más información
+inventor.patronage.form.label.published = Publicado
 
+inventor.patronage.form.button.update = Actualizar
 inventor.patronage.form.button.patron = Patrocinador

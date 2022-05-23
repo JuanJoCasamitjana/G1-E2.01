@@ -3,10 +3,12 @@ package acme.features.inventor.item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamCheck;
 import acme.entities.Item;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
 
@@ -63,6 +65,33 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 			Item item;
 			item = this.repository.findItemByCode(entity.getCode());
 			errors.state(request, item == null || item.getCode() == entity.getCode(), "code", "inventor.item.form.error.duplicated");
+			
+			
+			boolean descriptionWithinThreshold, nameWithinThreshold, technologyWithinThreshold;
+			
+			descriptionWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getDescription());
+			nameWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getName());
+			technologyWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getTechnology());
+			
+			errors.state(request, !descriptionWithinThreshold, "description", "inventor.item.form.error.spam");
+			errors.state(request, !nameWithinThreshold, "name", "inventor.item.form.error.spam");
+			errors.state(request, !technologyWithinThreshold, "technology", "inventor.item.form.error.spam");
+			
+			
+		}
+		if (!errors.hasErrors("retailPrice")) {
+			final Money budget = entity.getRetailPrice();
+			final Boolean isBudgetOverZero = budget.getAmount() > 0.;
+			final String[] splits = this.repository.findAcceptedCurrencies().split(",");
+			Boolean isCurrencyAccepted;
+			isCurrencyAccepted = false;
+			for (int i = 0; i < splits.length; i++) {
+				if (splits[i].equals(budget.getCurrency())) {
+					isCurrencyAccepted = true;
+				}
+			}
+			errors.state(request, isBudgetOverZero, "retailPrice", "inventor.item.form.error.retailPrice.amount");
+			errors.state(request, isCurrencyAccepted, "retailPrice", "inventor.item.form.error.retailPrice.currency");
 		}
 	}
 
