@@ -1,8 +1,5 @@
 package acme.features.patron.patronage;
 
-import java.util.Date;
-
-import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +7,6 @@ import acme.entities.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractDeleteService;
 import acme.roles.Patron;
 
@@ -76,39 +72,6 @@ public class PatronPatronageDeleteService implements AbstractDeleteService<Patro
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		if (!errors.hasErrors("code")) {
-			Patronage pWithSameCode;
-			pWithSameCode = this.repository.findOnePatronageByCode(entity.getCode());
-			final Boolean sameCodeExists = pWithSameCode == null || pWithSameCode.getId() == entity.getId();
-			errors.state(request, sameCodeExists, "code", "patron.patronage.form.error.code");
-		}
-		if (!errors.hasErrors("budget")) {
-			final Money budget = entity.getBudget();
-			final Boolean isBudgetOverZero = budget.getAmount() > 0.;
-			final String[] splits = this.repository.findAcceptedCurrencies().split(",");
-			Boolean isCurrencyAccepted;
-			isCurrencyAccepted = false;
-			for (int i = 0; i < splits.length; i++) {
-				if (splits[i].equals(budget.getCurrency())) {
-					isCurrencyAccepted = true;
-				}
-			}
-			errors.state(request, isBudgetOverZero, "budget", "patron.patronage.form.error.budget.amount");
-			errors.state(request, isCurrencyAccepted, "budget", "patron.patronage.form.error.budget.currency");
-		}
-		if (!errors.hasErrors("startDate")) {
-			Date minimumStartDate;
-			minimumStartDate = DateUtils.addMonths(entity.getCreationDate(), 1);
-			final Boolean isStartDateAfterMinimum = entity.getStartDate().after(DateUtils.addMinutes(minimumStartDate, -1));
-			errors.state(request, isStartDateAfterMinimum, "startDate", "patron.patronage.form.error.startDate");
-		}
-		if (!errors.hasErrors("finishDate")) {
-			Date minimumFinishDate;
-			minimumFinishDate = DateUtils.addMonths(entity.getStartDate(), 1);
-			final Boolean isFinishDateAfterMinimum = entity.getFinishDate().after(DateUtils.addMinutes(minimumFinishDate, -1));
-			errors.state(request, isFinishDateAfterMinimum, "finishDate", "patron.patronage.form.error.finishDate");
-		}
 		
 	}
 

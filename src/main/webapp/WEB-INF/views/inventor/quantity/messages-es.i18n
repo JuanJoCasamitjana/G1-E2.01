@@ -1,0 +1,31 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+inventor.tool-kit-quantity.list.title = Listado de herramientas y componentes del tool kit:
+
+inventor.tool-kit-quantity.list.label.name = Nombre
+inventor.tool-kit-quantity.list.label.type = Tipo
+inventor.tool-kit-quantity.list.label.code = Codigo
+inventor.tool-kit-quantity.list.label.technology = Tecnologia
+inventor.tool-kit-quantity.list.label.retail-price = Precio
+inventor.tool-kit-quantity.list.label.amount = Cantidad en el tool kit
+
+inventor.quantity.form.label.itemCode = Codigo de herramienta/componente
+inventor.quantity.form.label.amount = Cantidad
+
+inventor.tool-kit-quantity.list.label.create.button = Agregar a este tool kit
+
+inventor.quantity.form.button.update = Actualizar cantidad
+inventor.quantity.form.button.delete = Eliminar del tool kit
+inventor.quantity.form.button.create = Agregar al tool kit
+
+inventor.quantity.form.error.no-item-with-code = No existe ningun componente o herramienta con este codigo
+inventor.quantity.form.error.published.tk = No se pueden editar los componentes y herramientas de un tool kit ya publicado
+inventor.quantity.form.error.not-published.item = No se pueden agregar componentes o herramientas que no esten publicadas

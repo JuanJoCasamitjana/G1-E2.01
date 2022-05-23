@@ -18,8 +18,6 @@
 <acme:form readonly="false">
 	<acme:input-select code="patron.patronage.form.label.status" path="status">
 		<acme:input-option code="PROPOSED" value="PROPOSED" selected="${status == 'PROPOSED'}"/>
-		<acme:input-option code="ACCEPTED" value="ACCEPTED" selected="${status == 'ACCEPTED'}"/>
-		<acme:input-option code="DENIED" value="DENIED" selected="${status == 'DENIED'}"/>
 	</acme:input-select>
 	<acme:input-textbox code="patron.patronage.form.label.code" path="code"/>
 	<acme:input-textbox code="patron.patronage.form.label.legalStuff" path="legalStuff"/>	
