@@ -1,2 +1,8 @@
 recordIndex,type,name,code,technology,description,retail-price,optional-link,published
-0,COMPONENT,,,,,,a,
+0,COMPONENT,,,,,,,
+1,COMPONENT,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,COM-321-D,5w30,para engrasar el brazo mecánico,EUR 33.29,http://www.example.com,false
+2,COMPONENT,Oil,aaaaaa,5w30,para engrasar el brazo mecánico,EUR 33.29,http://www.example.com,false
+3,COMPONENT,Oil,COM-321-D,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,para engrasar el brazo mecánico,EUR 33.29,http://www.example.com,false
+4,COMPONENT,Oil,COM-321-D,5w30,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,EUR 33.29,http://www.example.com,false
+5,COMPONENT,Oil,COM-321-D,5w30,para engrasar el brazo mecánico,EUR -33.29,http://www.example.com,false
+6,COMPONENT,Oil,COM-321-D,5w30,para engrasar el brazo mecánico,EUR 33.29,a,false

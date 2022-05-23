@@ -1,2 +1,2 @@
 recordIndex,type,name,code,technology,description,retail-price,optional-link,published
-0,COMPONENT,Oil,COM-321-D,5w30,para engrasar el brazo mecánico,EUR 33.29,,false
+0,COMPONENT,Oil,COM-321-D,5w30,para engrasar el brazo mecánico,EUR 33.29,http://www.example.com,false

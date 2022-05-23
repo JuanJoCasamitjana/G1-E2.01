@@ -1,2 +1,8 @@
 recordIndex,type,name,code,technology,description,retail-price,optional-link,published
-0,TOOL,,,,,,a,
+0,TOOL,,,,,,,
+1,TOOL,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,TOL-333-A,placeholder technology,a tool example,EUR 23.45,http://www.example.com,false
+2,TOOL,an example,aaaaaa,placeholder technology,a tool example,EUR 23.45,http://www.example.com,false
+3,TOOL,an example,TOL-333-A,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,a tool example,EUR 23.45,http://www.example.com,false
+4,TOOL,an example,TOL-333-A,placeholder technology,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,EUR 23.45,http://www.example.com,false
+5,TOOL,an example,TOL-333-A,placeholder technology,a tool example,EUR -23.45,http://www.example.com,false
+6,TOOL,an example,TOL-333-A,placeholder technology,a tool example,EUR 23.45,a,false

@@ -1,2 +1,2 @@
 recordIndex,type,name,code,technology,description,retail-price,optional-link,published
-0,"TOOL","Electric drill updated","TOL-123-A","placeholder technology","An electric drill","EUR 123.45",,false
+0,"TOOL","ruler updated",TOL-123-W,"placeholder technology updated","a ruler updated","EUR 123.45",http://www.exampleupdated.com,false
