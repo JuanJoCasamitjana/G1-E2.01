@@ -7,6 +7,4 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AdministratorAnnouncementRepository extends AbstractRepository {
 	
-	
-	
 }
