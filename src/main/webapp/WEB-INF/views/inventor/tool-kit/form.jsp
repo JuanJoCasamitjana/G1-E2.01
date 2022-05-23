@@ -21,7 +21,7 @@
 	<acme:input-textbox code="inventor.toolKit.form.label.description" path="description"/>
 	<acme:input-textbox code="inventor.toolKit.form.label.assemblyNotes" path="assemblyNotes"/>
 	<acme:input-url code="inventor.toolKit.form.label.optionalLink" path="optionalLink"/>
-	<acme:hidden-data path="published"/>
+	<acme:input-checkbox code="inventor.toolKit.form.label.published" path="published"/>
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && !published}">

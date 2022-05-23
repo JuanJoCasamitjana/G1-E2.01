@@ -7,6 +7,7 @@ inventor.toolKit.form.label.title = Title
 inventor.toolKit.form.label.description = Description
 inventor.toolKit.form.label.assemblyNotes = Assembly Notes
 inventor.toolKit.form.label.optionalLink = Link
+inventor.toolKit.form.label.published = Published
 
 inventor.toolKit.list.label.create = Make a new tool kit
 
