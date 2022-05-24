@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="**/anonymous/user-account/**|**/authenticated/user-account/**|**/fragments/**" kind="src" path="Acme-Framework-22.5.1"/>
+	<classpathentry kind="src" path="Acme-Framework-22.6"/>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
@@ -46,5 +46,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Admin/Desktop/Workspace-22.0/Projects/G1-E2.01/SpamDetector.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
