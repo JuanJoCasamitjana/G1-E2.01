@@ -36,11 +36,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Acme-Framework-22.5.1</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-22.5.1/target/classes</locationURI>
-		</link>
-		<link>
 			<name>Acme-Framework-22.6</name>
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-22.6/target/classes</locationURI>
