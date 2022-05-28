@@ -15,9 +15,12 @@ public class AuthenticatedMoneyExchangeController extends AbstractController<Aut
 	@Autowired
 	protected AuthenticatedMoneyExchangeService exchangeService;
 	
+	@Autowired
+	protected AuthenticatedMoneyExchangeListService listService;
 	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("perform", this.exchangeService);
+		super.addCommand("list", this.listService);
 	}
 }
