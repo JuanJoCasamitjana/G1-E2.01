@@ -61,24 +61,31 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
 		if(!errors.hasErrors("code")) {
 			Item item;
 			item = this.repository.findItemByCode(entity.getCode());
 			errors.state(request, item == null || item.getCode().equals(entity.getCode()), "code", "inventor.item.form.error.duplicated");
-			
-			
-			boolean descriptionWithinThreshold, nameWithinThreshold, technologyWithinThreshold;
-			
-			descriptionWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getDescription());
-			nameWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getName());
-			technologyWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getTechnology());
-			
-			errors.state(request, !descriptionWithinThreshold, "description", "inventor.item.form.error.spam");
-			errors.state(request, !nameWithinThreshold, "name", "inventor.item.form.error.spam");
-			errors.state(request, !technologyWithinThreshold, "technology", "inventor.item.form.error.spam");
-			
-			
 		}
+		if(!errors.hasErrors("description")) {
+			boolean descriptionWithinThreshold;
+			descriptionWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getDescription());
+			errors.state(request, !descriptionWithinThreshold, "description", "inventor.item.form.error.spam");
+		}
+		
+		if(!errors.hasErrors("name")) {
+			boolean nameWithinThreshold;
+			nameWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getName());
+			errors.state(request, !nameWithinThreshold, "name", "inventor.item.form.error.spam");
+		}
+		if(!errors.hasErrors("technology")) {
+			boolean technologyWithinThreshold;
+			technologyWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getTechnology());
+			errors.state(request, !technologyWithinThreshold, "technology", "inventor.item.form.error.spam");
+		}
+		
+		
+		
 		if (!errors.hasErrors("retailPrice")) {
 			final Money budget = entity.getRetailPrice();
 			final Boolean isBudgetOverZero = budget.getAmount() > 0.;

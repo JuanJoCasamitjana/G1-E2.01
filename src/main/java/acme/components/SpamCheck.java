@@ -20,6 +20,8 @@ public class SpamCheck {
 		SpamDetector strongDetect, weakDetect;
 		String strongTerms, weakTerms;
 		Double strongThreshold, weakThreshold;
+		Boolean strongCheck, weakCheck;
+		
 		
 		strongTerms = SpamCheck.repository.getStrongSpamTerms();
 		weakTerms = SpamCheck.repository.getWeakSpamTerms();
@@ -30,6 +32,15 @@ public class SpamCheck {
 		strongDetect = SpamDetector.of(strongTerms, strongThreshold); //check devuelve true si esta por encima del umbral
 		weakDetect = SpamDetector.of(weakTerms, weakThreshold);
 		
-		return !(strongDetect.check(text) || weakDetect.check(text));
+		strongCheck = strongDetect.check(text);
+		weakCheck = weakDetect.check(text);		
+		
+		System.out.println("text: " + text);
+		System.out.println("strongCheck: " + strongCheck);
+		System.out.println("weakCheck: " + weakCheck);
+		
+		
+		
+		return !(strongCheck || weakCheck);
 	}
 }
