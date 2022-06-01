@@ -5,5 +5,3 @@ authenticated.announcement.form.label.url = URL
 
 administrator.announcement.form.label.confirmation = Confirmar la creacion de este anuncio
 administrator.announcement.form.button.create = Crear
-
-administrator.announcement.form.error.spam = El ratio de terminos de spam debe ser bajo

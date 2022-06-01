@@ -3,7 +3,6 @@ package acme.features.inventor.toolkit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.SpamCheck;
 import acme.entities.ToolKit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -68,16 +67,6 @@ public class InventorToolKitCreateService implements AbstractCreateService<Inven
 			ToolKit toolKit;
 			toolKit = this.repository.findToolKitByCode(entity.getCode());
 			errors.state(request, toolKit == null || toolKit.getCode().equals(entity.getCode()), "code", "inventor.tool-kit.form.error.duplicated");
-			
-			boolean descriptionWithinThreshold, titleWithinThreshold, assemblyNotesWithinThreshold;
-			
-			descriptionWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getDescription());
-			titleWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getTitle());
-			assemblyNotesWithinThreshold = SpamCheck.isWithinSpamThreshold(entity.getAssemblyNotes());
-			
-			errors.state(request, !descriptionWithinThreshold, "description", "inventor.tool-kit.form.error.spam");
-			errors.state(request, !titleWithinThreshold, "name", "inventor.tool-kit.form.error.spam");
-			errors.state(request, !assemblyNotesWithinThreshold, "assemblyNotes", "inventor.tool-kit.form.error.spam");
 		}
 	}
 
