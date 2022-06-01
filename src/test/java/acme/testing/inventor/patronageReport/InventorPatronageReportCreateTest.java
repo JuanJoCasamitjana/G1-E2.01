@@ -35,7 +35,7 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 		super.checkFormExists();
 		
 		super.checkInputBoxHasValue("status", "PROPOSED");
-		super.checkInputBoxHasValue("code", "PAT-001-A");
+		super.checkInputBoxHasValue("code", "AAA-000-A");
 		super.checkInputBoxHasValue("legalStuff", "The legal stuff is here");
 		super.checkInputBoxHasValue("budget", "EUR 1,099.99");
 		super.checkInputBoxHasValue("startDate", "2023/02/20 09:00");

@@ -29,7 +29,7 @@ public class AnyChirpCreateTest extends TestHarness {
 		super.clickOnSubmit("Create");
 		
 		super.checkListingExists();
-		super.sortListing(0, "asc");
+		super.sortListing(0, "desc");
 		super.checkColumnHasValue(recordIndex, 1, title);
 		super.checkColumnHasValue(recordIndex, 2, author);
 		super.checkColumnHasValue(recordIndex, 3, body);
