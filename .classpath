@@ -6,7 +6,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**/anonymous/user-account/**|**/authenticated/user-account/**|**/fragments/**" kind="src" path="Acme-Framework-22.6"/>
+	<classpathentry excluding="**/anonymous/user-account/**|**/authenticated/user-account/**|**/fragments/**" kind="src" path="Acme-Framework-22.7"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/webapp">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -41,7 +41,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Admin/Desktop/Workspace-22.0/Projects/G1-E2.01/SpamDetector.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Acme-Framework-22.6"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Acme-Framework-22.7"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
