@@ -17,7 +17,7 @@ public class PatronPatronageUpdateTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/patron/patronage/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String status, final String code, final String legalStuff, final String budget, final String startDate, final String finishDate, final String moreInfo, final String published) {
+	public void positiveTest(final int recordIndex, final String status, final String code, final String legalStuff, final String budget, final String startDate, final String finishDate, final String moreInfo, final String published, final String inventor) {
 		super.signIn("patron1", "patron1");
 
 		super.clickOnMenu("Patrons", "My patronages");
@@ -35,7 +35,8 @@ public class PatronPatronageUpdateTest extends TestHarness {
 		super.fillInputBoxIn("finishDate", finishDate);
 		super.fillInputBoxIn("moreInfo", moreInfo);
 		super.fillInputBoxIn("published", published);
-
+		super.fillInputBoxIn("inventor", inventor);
+		
 		super.clickOnSubmit("Update");
 
 		super.checkListingExists();
